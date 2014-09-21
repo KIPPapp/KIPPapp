@@ -1,7 +1,7 @@
 KIPPapp
 =======
 
-##### Describe the app: 
+##### Describe the app
 - Student - Teacher - Parent portal
  - Communication and reporting tool for students, teachers and parents
 

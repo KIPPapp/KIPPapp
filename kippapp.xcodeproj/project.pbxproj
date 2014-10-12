@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		006A939519EB1A60000947F5 /* StudentMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A939419EB1A60000947F5 /* StudentMasterViewController.swift */; };
 		5D0BF85619EAF989000018FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0BF85519EAF989000018FF /* LoginViewController.swift */; };
 		5D2FBD4919E221EA00621E49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2FBD4819E221EA00621E49 /* AppDelegate.swift */; };
 		5D2FBD4E19E221EA00621E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2FBD4C19E221EA00621E49 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		006A939419EB1A60000947F5 /* StudentMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentMasterViewController.swift; sourceTree = "<group>"; };
 		28C583936A0E35000F124A8E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2F0DC0C77BED9C0777DAC71F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DA1BA3838E8762755C3DFE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				5D0BF85519EAF989000018FF /* LoginViewController.swift */,
 				5D30E96A19EAF0F700640C1C /* StudentGroupViewController.swift */,
+				006A939419EB1A60000947F5 /* StudentMasterViewController.swift */,
 				5D30E96619EAEC1A00640C1C /* StudentProfilePageViewController.swift */,
 				5D30E96419EAEC1300640C1C /* StudentAcademicPageViewController.swift */,
 				5D703CBE19EA3B0B0031FDDB /* GroupController.swift */,
@@ -324,6 +327,7 @@
 				5D30E96119EA633F00640C1C /* GroupCell.swift in Sources */,
 				5D30E96719EAEC1A00640C1C /* StudentProfilePageViewController.swift in Sources */,
 				5D703CC119EA41700031FDDB /* CelebrateStudentViewCell.swift in Sources */,
+				006A939519EB1A60000947F5 /* StudentMasterViewController.swift in Sources */,
 				5D30E95F19EA529400640C1C /* CheckinStudentCell.swift in Sources */,
 				5D703CBA19EA39920031FDDB /* CelebrateController.swift in Sources */,
 				5D30E96519EAEC1300640C1C /* StudentAcademicPageViewController.swift in Sources */,

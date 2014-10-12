@@ -205,13 +205,14 @@
                             <constraint firstAttribute="trailing" secondItem="tbc-xW-nHv" secondAttribute="trailing" id="mI3-ce-t6O"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cc7-e5-C4W"/>
                     <connections>
                         <outlet property="tableView" destination="tbc-xW-nHv" id="nUY-ND-3jw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzl-H7-Q73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-132" y="1670"/>
+            <point key="canvasLocation" x="680" y="1670"/>
         </scene>
         <!--Groups-->
         <scene sceneID="KFi-K4-xgS">
@@ -644,7 +645,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48l-l6-syw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2371" y="1464"/>
+            <point key="canvasLocation" x="3183" y="1464"/>
         </scene>
         <!--Student Profile Page View Controller-->
         <scene sceneID="yWc-TN-tVk">
@@ -699,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nk5-zw-f0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4102" y="1403"/>
+            <point key="canvasLocation" x="4914" y="1403"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c8K-YQ-2Nh">
@@ -717,7 +718,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2DO-pd-5i5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="1464"/>
+            <point key="canvasLocation" x="2371" y="1464"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mkB-cu-2bJ">
@@ -735,7 +736,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4U-t1-2o6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3290" y="1403"/>
+            <point key="canvasLocation" x="4102" y="1403"/>
         </scene>
         <!--Student Roster-->
         <scene sceneID="eWu-Of-KPf">
@@ -755,6 +756,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Apg-pz-2WV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-603" y="997"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jy4-2p-tyG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HRt-xx-beP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eBv-DO-8bD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5Eo-pg-oaD" kind="relationship" relationship="rootViewController" id="xAy-vd-9ZF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9h1-Fu-JJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="1670"/>
         </scene>
     </scenes>
     <resources>

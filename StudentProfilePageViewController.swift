@@ -13,13 +13,27 @@ class StudentProfilePageViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var studentNameLabel: UILabel!
     @IBOutlet weak var studentIDLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneButton: UIButton!
+    @IBOutlet weak var emailButton: UIButton!
+    @IBAction func onPhoneButtonClicked(sender: UIButton) {
+        
+        let phoneText = sender.currentTitle as String?
+        println("Dialing \(phoneText)...")
+    UIApplication.sharedApplication().openURL(NSURL.URLWithString(phoneText!))
+ 
+    }
+    
+    @IBAction func onEmailButtonClicked(sender: UIButton) {
+        
+        let emailText = sender.currentTitle as String?
+        println("Opening mail application...")
+    UIApplication.sharedApplication().openURL(NSURL.URLWithString(emailText!))
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {

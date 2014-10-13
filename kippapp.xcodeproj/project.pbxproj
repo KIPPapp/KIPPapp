@@ -25,6 +25,11 @@
 		5D703CBF19EA3B0B0031FDDB /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D703CBE19EA3B0B0031FDDB /* GroupController.swift */; };
 		5D703CC119EA41700031FDDB /* CelebrateStudentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D703CC019EA41700031FDDB /* CelebrateStudentViewCell.swift */; };
 		78BB434D4193D4750AA3749A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0DC0C77BED9C0777DAC71F /* libPods.a */; };
+		BAC8398A19EB57FF0067E9AB /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8398519EB57FF0067E9AB /* Group.swift */; };
+		BAC8398B19EB57FF0067E9AB /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8398619EB57FF0067E9AB /* Parent.swift */; };
+		BAC8398C19EB57FF0067E9AB /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8398719EB57FF0067E9AB /* Student.swift */; };
+		BAC8398D19EB57FF0067E9AB /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8398819EB57FF0067E9AB /* Subject.swift */; };
+		BAC8398E19EB57FF0067E9AB /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8398919EB57FF0067E9AB /* Teacher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,11 @@
 		5D703CBC19EA3A3C0031FDDB /* CheckinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinController.swift; sourceTree = "<group>"; };
 		5D703CBE19EA3B0B0031FDDB /* GroupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
 		5D703CC019EA41700031FDDB /* CelebrateStudentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelebrateStudentViewCell.swift; sourceTree = "<group>"; };
+		BAC8398519EB57FF0067E9AB /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = kippapp/Group.swift; sourceTree = "<group>"; };
+		BAC8398619EB57FF0067E9AB /* Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parent.swift; path = kippapp/Parent.swift; sourceTree = "<group>"; };
+		BAC8398719EB57FF0067E9AB /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = kippapp/Student.swift; sourceTree = "<group>"; };
+		BAC8398819EB57FF0067E9AB /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subject.swift; path = kippapp/Subject.swift; sourceTree = "<group>"; };
+		BAC8398919EB57FF0067E9AB /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Teacher.swift; path = kippapp/Teacher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,7 @@
 		5D2FBD3A19E221EA00621E49 = {
 			isa = PBXGroup;
 			children = (
+				BAC8398419EB57BE0067E9AB /* Models */,
 				5D703CC219EA41770031FDDB /* Views */,
 				5D703CBB19EA39980031FDDB /* ViewControllers */,
 				5D2FBD4519E221EA00621E49 /* kippapp */,
@@ -177,6 +188,18 @@
 				32DA1BA3838E8762755C3DFE /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BAC8398419EB57BE0067E9AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAC8398519EB57FF0067E9AB /* Group.swift */,
+				BAC8398619EB57FF0067E9AB /* Parent.swift */,
+				BAC8398719EB57FF0067E9AB /* Student.swift */,
+				BAC8398819EB57FF0067E9AB /* Subject.swift */,
+				BAC8398919EB57FF0067E9AB /* Teacher.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E26331251F8CA0F743D304B9 /* Frameworks */ = {
@@ -328,13 +351,18 @@
 				5D30E96719EAEC1A00640C1C /* StudentProfilePageViewController.swift in Sources */,
 				5D703CC119EA41700031FDDB /* CelebrateStudentViewCell.swift in Sources */,
 				006A939519EB1A60000947F5 /* StudentMasterViewController.swift in Sources */,
+				BAC8398E19EB57FF0067E9AB /* Teacher.swift in Sources */,
 				5D30E95F19EA529400640C1C /* CheckinStudentCell.swift in Sources */,
+				BAC8398A19EB57FF0067E9AB /* Group.swift in Sources */,
 				5D703CBA19EA39920031FDDB /* CelebrateController.swift in Sources */,
 				5D30E96519EAEC1300640C1C /* StudentAcademicPageViewController.swift in Sources */,
 				5D703CBF19EA3B0B0031FDDB /* GroupController.swift in Sources */,
 				5D2FBD4919E221EA00621E49 /* AppDelegate.swift in Sources */,
 				5D30E96919EAF0DE00640C1C /* GradeViewCell.swift in Sources */,
 				5D703CBD19EA3A3C0031FDDB /* CheckinController.swift in Sources */,
+				BAC8398B19EB57FF0067E9AB /* Parent.swift in Sources */,
+				BAC8398D19EB57FF0067E9AB /* Subject.swift in Sources */,
+				BAC8398C19EB57FF0067E9AB /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,15 @@ class CheckinStudentCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    var student:Student? = nil {
+        didSet {
+            groupLabel.text = student!.groupName
+            studentNameLabel.text = student!.name
+            
+        }
+        
+    }
     @IBOutlet weak var groupLabel: UILabel!
 
     @IBOutlet weak var studentNameLabel: UILabel!

@@ -9,6 +9,15 @@
 import UIKit
 
 class CelebrateStudentViewCell: UITableViewCell {
+    
+    var student:Student? = nil {
+        didSet {
+            groupLabel.text = student!.groupName
+            studentNameLabel.text = student!.name
+            
+        }
+  
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,7 +9,7 @@
 import UIKit
 
 class CheckinController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    var studentList:[Student] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -19,6 +19,19 @@ class CheckinController: UIViewController, UITableViewDataSource, UITableViewDel
         self.tableView.rowHeight = UITableViewAutomaticDimension
 
         // Do any additional setup after loading the view.
+        self.view.showActivityViewWithLabel("Loading")
+        var parseAPI:ParseAPI = (self.tabBarController as KippAppController).parseAPI
+        parseAPI.getStudentData("Mia Hamm", grade:"Secondary Intervention") { (students, groups, error) -> () in
+            for student in students! {
+                if (student.progress < 2) {
+                    self.studentList.append(student)
+                }
+            }
+            self.view.hideActivityView()
+            self.tableView.reloadData()
+            
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +43,7 @@ class CheckinController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1;
+        return studentList.count
     }
     
     // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
@@ -38,12 +51,26 @@ class CheckinController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("CheckinStudentCell") as CheckinStudentCell
-        cell.studentNameLabel.text = "Mary Beshai"
-        cell.groupLabel.text = "Geometry"
+        cell.student = studentList[indexPath.row]
         
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showAcademicRecord") {
+            
+            var indexPath:NSIndexPath = self.tableView.indexPathForSelectedRow()!
+            let student = studentList[indexPath.row]
+            
+            let navigationController = segue.destinationViewController as UINavigationController
+            let detailViewController = navigationController.viewControllers[0] as StudentAcademicPageViewController
+            detailViewController.student = student
+            
+        }
+        
+    }
+
 
     
     

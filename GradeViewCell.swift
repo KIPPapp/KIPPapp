@@ -17,6 +17,20 @@ class GradeViewCell: UITableViewCell {
     @IBOutlet weak var gradeTwo: UILabel!
     @IBOutlet weak var gradeThree: UILabel!
     
+    var student:Student? = nil {
+        didSet {
+            studentName.text = student!.name
+            var grade = (student!.progress as NSNumber).stringValue
+            gradeOne.text = " \(grade) "
+            grade = (student!.currentNumTries as NSNumber).stringValue
+            gradeTwo.text = " \(grade) "
+            grade = (student!.minLastWeek as NSNumber).stringValue
+            gradeThree.text = " \(grade) "
+            
+        }
+        
+    }
+    
     
     override func awakeFromNib() {
         

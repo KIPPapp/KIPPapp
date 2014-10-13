@@ -9,8 +9,13 @@
 import UIKit
 
 class StudentMasterViewController: UIViewController, UITableViewDelegate,  UITableViewDataSource {
-    
+    var studentList:[Student] = []
 
+    @IBAction func goBack(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
+    }
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +36,7 @@ class StudentMasterViewController: UIViewController, UITableViewDelegate,  UITab
         tableView.rowHeight = UITableViewAutomaticDimension
         
         // Do any additional setup after loading the view.
+              
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,7 +48,7 @@ class StudentMasterViewController: UIViewController, UITableViewDelegate,  UITab
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int
     {
-        return 7
+        return studentList.count
     }
     
     
@@ -51,7 +57,7 @@ class StudentMasterViewController: UIViewController, UITableViewDelegate,  UITab
     {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("GradeViewCell") as GradeViewCell
-        
+        cell.student = studentList[indexPath.row]
         
         return cell
         

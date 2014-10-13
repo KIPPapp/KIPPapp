@@ -9,11 +9,21 @@
 import UIKit
 
 class StudentAcademicPageViewController: UIViewController{
+    
+    var student:Student? = nil
 
     @IBOutlet weak var groupLabel: UILabel!
     @IBOutlet weak var studentNameLabel: UILabel!
     @IBOutlet weak var weeklyProgressBar: UIProgressView!
     
+    @IBAction func goBack(sender: AnyObject) {
+        
+      dismissViewControllerAnimated(true, completion: { () -> Void in
+       
+      })
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +36,23 @@ class StudentAcademicPageViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        groupLabel.text = student!.groupName
+        studentNameLabel.text = student!.name
+        weeklyProgressBar.setProgress(student!.progress/100, animated: true)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showPersonal") {
+            
+            let navigationController = segue.destinationViewController as UINavigationController
+            let detailViewController = navigationController.viewControllers[0] as StudentProfilePageViewController
+            detailViewController.student = student
+
+            
+        }
+    }
 
     /*
     // MARK: - Navigation

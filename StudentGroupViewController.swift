@@ -11,6 +11,7 @@ import UIKit
 class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    var studentList:[Student] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,20 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
         tableView.estimatedRowHeight = 100
         
         tableView.rowHeight = UITableViewAutomaticDimension
+        // Do any additional setup after loading the view.
+        var parseAPI:ParseAPI = (self.tabBarController as KippAppController).parseAPI
+        
+        self.view.showActivityViewWithLabel("Loading")
+        parseAPI.getStudentData("Mia Hamm", grade:"Secondary Intervention") { (students, groups,error) -> () in
+            for student in students! {
+                self.studentList.append(student)
+            }
+             self.studentList.sort({$0.name.localizedCaseInsensitiveCompare($1.name) == NSComparisonResult.OrderedAscending})
+            self.view.hideActivityView()
+            self.tableView.reloadData()
+            
+        }
+
         
         // Do any additional setup after loading the view.
     }
@@ -42,7 +57,7 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int
     {
-        return 7
+        return studentList.count
     }
     
     
@@ -71,6 +86,7 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
             checkItem.checkState = M13CheckboxStateUnchecked
         }
         cell.checkBoxContainer.addSubview(checkItem)
+        cell.student = studentList[indexPath.row]
         return cell
         
     }
@@ -86,6 +102,22 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
         
         
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showAcademicRecord") {
+            
+            var indexPath:NSIndexPath = self.tableView.indexPathForSelectedRow()!
+            let student = studentList[indexPath.row]
+            
+            let navigationController = segue.destinationViewController as UINavigationController
+            let detailViewController = navigationController.viewControllers[0] as StudentAcademicPageViewController
+            detailViewController.student = student
+            
+        }
+        
+    }
+
     
     
     /*

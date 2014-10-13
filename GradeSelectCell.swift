@@ -1,35 +1,25 @@
 //
-//  GroupCell.swift
+//  GradeSelectCell.swift
 //  kippapp
 //
-//  Created by Monika Gorkani on 10/12/14.
+//  Created by Monika Gorkani on 10/13/14.
 //  Copyright (c) 2014 kippgroup. All rights reserved.
 //
 
 import UIKit
 
-class GroupCell: UITableViewCell {
+class GradeSelectCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    var group:String? = nil {
-        didSet {
-            groupName.text = group!
-           
-            
-        }
-        
-    }
-
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-    @IBOutlet weak var groupName: UILabel!
 
+    @IBOutlet weak var gradeNameLabel: UILabel!
 }

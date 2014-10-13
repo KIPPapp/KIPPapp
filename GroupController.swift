@@ -10,11 +10,26 @@ import UIKit
 
 class GroupController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var groups:[String] = []
+    var students:[Student] = []
    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        self.view.showActivityViewWithLabel("Loading")
+        var parseAPI:ParseAPI = (self.tabBarController as KippAppController).parseAPI
+        parseAPI.getStudentData("Mia Hamm", grade:"Secondary Intervention") { (students, groups, error) -> () in
+            for group in groups! {
+                self.groups.append(group)
+            }
+            self.groups.sort({$0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending})
+            self.students = students!
+            self.view.hideActivityView()
+            self.tableView.reloadData()
+            
+        }
+
 
         // Do any additional setup after loading the view.
     }
@@ -26,7 +41,7 @@ class GroupController: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return groups.count
     }
     
     // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
@@ -34,8 +49,29 @@ class GroupController: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("GroupCell") as GroupCell
-        cell.groupName.text = "Probability"
+        cell.group = self.groups[indexPath.row]
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showMembers") {
+            
+            var indexPath:NSIndexPath = self.tableView.indexPathForSelectedRow()!
+            let groupName = groups[indexPath.row]
+            // find the students belonging to this group
+            var studentList:[Student] = []
+            for student in self.students {
+                if (student.groupName == groupName) {
+                    studentList.append(student)
+                }
+            }
+         
+            let navigationController = segue.destinationViewController as UINavigationController
+            let detailViewController = navigationController.viewControllers[0] as StudentMasterViewController
+            detailViewController.studentList = studentList
+            
+        }
+        
     }
 
     

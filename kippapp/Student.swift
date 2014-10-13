@@ -10,18 +10,24 @@ import Foundation
 
 class Student
 {
-    var name: String?
-    var id: NSNumber
+    var name: String = ""
+    var id: String = ""
+    var grade: String = ""
+    var teacher: String = ""
+    var mastery: Float = 0.0
+    var progress: Float = 0.0
+    var currentNumTries: Int = 0
+    var groupName: String = ""
+    var homeLogins: Int = 0
+    var labLogins: Int = 0
+    var minLastWeek: Int = 0
+    
     var subjects: [Subject]?
     var groups: [Group]?
-    var teacher: Teacher?
     
-    init(name: String?, id: NSNumber?)
+    
+    init()
     {
-        self.name = name
-        self.id = id!
-        
-        //willSet
     }
     
     func assignGroupForWeek()

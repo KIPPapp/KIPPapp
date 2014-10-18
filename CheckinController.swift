@@ -23,7 +23,7 @@ class CheckinController: UIViewController, UITableViewDataSource, UITableViewDel
         var parseAPI:ParseAPI = (self.tabBarController as KippAppController).parseAPI
         parseAPI.getStudentData("Mia Hamm", grade:"Secondary Intervention") { (students, groups, error) -> () in
             for student in students! {
-                if (student.progress < 2) {
+                if (student.currentNumTries >= 3) {
                     self.studentList.append(student)
                 }
             }

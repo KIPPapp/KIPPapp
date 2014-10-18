@@ -5,66 +5,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Select Grade-->
-        <scene sceneID="YkU-ma-eVS">
-            <objects>
-                <viewController id="4Ms-Sw-8I8" customClass="GradeSelectorController" customModule="kippapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cAc-aG-dlq"/>
-                        <viewControllerLayoutGuide type="bottom" id="eeB-LF-kNQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bjN-yR-Snh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BQl-xI-u3t">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GradeSelectCell" rowHeight="70" id="Ynf-TM-DEp" customClass="GradeSelectCell" customModule="kippapp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ynf-TM-DEp" id="e7Y-Xq-dI4">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGN-wz-H3i">
-                                                    <rect key="frame" x="269" y="24" width="62" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="centerX" secondItem="cGN-wz-H3i" secondAttribute="centerX" id="IMN-fn-r1a"/>
-                                                <constraint firstAttribute="bottom" secondItem="cGN-wz-H3i" secondAttribute="bottom" constant="24" id="Z0Y-gO-YLS"/>
-                                                <constraint firstItem="cGN-wz-H3i" firstAttribute="top" secondItem="e7Y-Xq-dI4" secondAttribute="top" constant="24" id="kqp-bg-R9b"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="gradeNameLabel" destination="cGN-wz-H3i" id="spG-KH-dwt"/>
-                                            <segue destination="5EG-ut-qdX" kind="presentation" identifier="goHome" id="38T-9R-Lsj"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="BQl-xI-u3t" secondAttribute="trailing" id="egE-zs-hcn"/>
-                            <constraint firstItem="BQl-xI-u3t" firstAttribute="leading" secondItem="bjN-yR-Snh" secondAttribute="leading" id="ih3-5b-8o6"/>
-                            <constraint firstAttribute="bottom" secondItem="BQl-xI-u3t" secondAttribute="bottom" id="nYX-GY-Ec2"/>
-                            <constraint firstItem="BQl-xI-u3t" firstAttribute="top" secondItem="bjN-yR-Snh" secondAttribute="top" id="q0E-5b-I2C"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Select Grade" id="oNN-AX-vov"/>
-                    <connections>
-                        <outlet property="tableView" destination="BQl-xI-u3t" id="YdB-uk-Ohn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fiL-4N-Ku8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="567" y="470"/>
-        </scene>
         <!--StudentRoster-->
         <scene sceneID="0cd-qU-iD2">
             <objects>
@@ -179,7 +119,7 @@
             </objects>
             <point key="canvasLocation" x="1021" y="997"/>
         </scene>
-        <!--Group Members-->
+        <!--Students-->
         <scene sceneID="wNX-rG-tA6">
             <objects>
                 <viewController storyboardIdentifier="StudentMasterViewController" id="5Eo-pg-oaD" customClass="StudentMasterViewController" customModule="kippapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -267,7 +207,7 @@
                             <constraint firstAttribute="trailing" secondItem="tbc-xW-nHv" secondAttribute="trailing" id="mI3-ce-t6O"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Group Members" id="cc7-e5-C4W">
+                    <navigationItem key="navigationItem" title="Students" id="cc7-e5-C4W">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Wui-Uz-URd">
                             <connections>
                                 <action selector="goBack:" destination="5Eo-pg-oaD" id="V22-ge-O0a"/>
@@ -339,7 +279,7 @@
                             <constraint firstItem="N8W-fd-QH7" firstAttribute="leading" secondItem="OLV-Kd-Fhe" secondAttribute="leading" id="vMx-5P-vbj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Groups" id="W4T-qc-YVm"/>
+                    <navigationItem key="navigationItem" title="Topics" id="W4T-qc-YVm"/>
                     <connections>
                         <outlet property="tableView" destination="N8W-fd-QH7" id="71Y-nU-3UH"/>
                     </connections>
@@ -551,10 +491,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="P61-o2-Fvz" kind="relationship" relationship="viewControllers" id="8Mb-3U-PxP"/>
+                        <segue destination="9wq-ye-ah2" kind="relationship" relationship="viewControllers" id="Brg-mH-1qQ"/>
                         <segue destination="tRm-Vp-9cu" kind="relationship" relationship="viewControllers" id="gwK-IS-CGv"/>
                         <segue destination="ltZ-FM-Nvs" kind="relationship" relationship="viewControllers" id="Aw3-dO-jqo"/>
-                        <segue destination="9wq-ye-ah2" kind="relationship" relationship="viewControllers" id="Brg-mH-1qQ"/>
-                        <segue destination="P61-o2-Fvz" kind="relationship" relationship="viewControllers" id="8Mb-3U-PxP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nps-Fr-Let" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -606,7 +546,7 @@
                     <connections>
                         <outlet property="passwordLabel" destination="Hes-pg-47b" id="cp3-dL-JvN"/>
                         <outlet property="usernameLabel" destination="bJK-zm-ygu" id="unX-fj-XAN"/>
-                        <segue destination="j9x-K1-qEi" kind="presentation" identifier="showGradeSelector" id="En1-of-jEt"/>
+                        <segue destination="5EG-ut-qdX" kind="presentation" identifier="showHome" id="Alw-GY-esl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ji2-Ts-qeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -651,11 +591,11 @@
             </objects>
             <point key="canvasLocation" x="1742" y="-654"/>
         </scene>
-        <!--Groups-->
+        <!--Topics-->
         <scene sceneID="4L8-8A-cxF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9wq-ye-ah2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Groups" image="groups-selected" id="ScA-q2-KbZ">
+                    <tabBarItem key="tabBarItem" title="Topics" image="groups-selected" id="ScA-q2-KbZ">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -848,6 +788,66 @@
             </objects>
             <point key="canvasLocation" x="2371" y="1464"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="otK-0J-eDC">
+            <objects>
+                <viewController id="km5-5O-ECp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6MV-kk-Stf"/>
+                        <viewControllerLayoutGuide type="bottom" id="37T-Rt-gXA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="50k-e8-czZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SsI-2O-f5f">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                                <collectionViewLayout key="collectionViewLayout" id="E1Z-BL-2Th"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="W2u-0g-2RX">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monika" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJt-w7-D4R">
+                                                    <rect key="frame" x="4" y="101" width="92" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gorkani" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jui-Z0-BJV">
+                                                    <rect key="frame" x="0.0" y="121" width="100" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNg-wH-bCM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <size key="customSize" width="100" height="150"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SsI-2O-f5f" firstAttribute="top" secondItem="50k-e8-czZ" secondAttribute="topMargin" id="Ghl-vw-eA0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SsI-2O-f5f" secondAttribute="trailing" id="oZX-9v-Ht4"/>
+                            <constraint firstItem="SsI-2O-f5f" firstAttribute="leading" secondItem="50k-e8-czZ" secondAttribute="leadingMargin" id="q6P-WS-QaY"/>
+                            <constraint firstItem="37T-Rt-gXA" firstAttribute="top" secondItem="SsI-2O-f5f" secondAttribute="bottom" id="qpb-x2-Oc4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HsH-Ss-CyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="2436"/>
+        </scene>
         <!--Student Profile Navigation-->
         <scene sceneID="mkB-cu-2bJ">
             <objects>
@@ -902,24 +902,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9h1-Fu-JJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-132" y="1670"/>
-        </scene>
-        <!--Grade Selector Navigator-->
-        <scene sceneID="NVU-R7-ph5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j9x-K1-qEi" userLabel="Grade Selector Navigator" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xhV-X9-bEZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4Ms-Sw-8I8" kind="relationship" relationship="rootViewController" id="Pak-Cd-jpt"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mFF-64-Czi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-245" y="470"/>
         </scene>
     </scenes>
     <resources>

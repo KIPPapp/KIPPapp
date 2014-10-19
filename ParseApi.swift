@@ -39,7 +39,7 @@ class ParseAPI {
                     // The find succeeded.
                     NSLog("Successfully retrieved \(objects.count) Student Stats.")
                     // Do something with the found objects
-               
+                    var index:NSNumber = 1
                     for object in objects {
                    
                         var student:Student = Student()
@@ -53,7 +53,8 @@ class ParseAPI {
                         student.grade = object["Grade"] as String
                         student.teacher = object["Teacher"] as String
                         student.currentNumTries = (object["currentNumTries"] as String).toInt()!
-                    
+                        student.imagePath = "\(index.stringValue).png"
+                        index=index+1
                         student.minLastWeek = (object["minLastWeek"] as String).toInt()!
                         self.students.append(student)
                         if (!contains(self.groups,student.groupName)) {

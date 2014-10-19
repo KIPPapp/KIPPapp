@@ -8,11 +8,10 @@
 
 import UIKit
 
-class CheckinController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class StudentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var studentList:[Student] = []
-    
-    @IBOutlet weak var collectionView: UICollectionView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -23,23 +22,23 @@ class CheckinController: UIViewController, UICollectionViewDataSource, UICollect
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        self.view.showActivityViewWithLabel("Loading")
         var parseAPI:ParseAPI = (self.tabBarController as KippAppController).parseAPI
-        parseAPI.getStudentData("Mia Hamm", grade:"Secondary Intervention") { (students, groups, error) -> () in
+        
+        self.view.showActivityViewWithLabel("Loading")
+        parseAPI.getStudentData("Mia Hamm", grade:"Secondary Intervention") { (students, groups,error) -> () in
             for student in students! {
-                if (student.currentNumTries >= 3) {
-                    self.studentList.append(student)
-                }
+                self.studentList.append(student)
             }
+            self.studentList.sort({$0.name.localizedCaseInsensitiveCompare($1.name) == NSComparisonResult.OrderedAscending})
             self.view.hideActivityView()
             self.collectionView.reloadData()
             
         }
-        
-        
+
+
         // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -55,18 +54,18 @@ class CheckinController: UIViewController, UICollectionViewDataSource, UICollect
         cell.student = studentList[indexPath.row]
         return cell
     }
+
     
-    
-    
-    
+
+    @IBOutlet weak var collectionView: UICollectionView!
     /*
     // MARK: - Navigation
-    
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
     */
-    
+
 }

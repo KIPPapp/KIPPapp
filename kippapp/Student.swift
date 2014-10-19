@@ -21,6 +21,8 @@ class Student
     var homeLogins: Int = 0
     var labLogins: Int = 0
     var minLastWeek: Int = 0
+    var imagePath:String = "monika_square.png"
+    var attendance:String = "notset"
     
     var subjects: [Subject]?
     var groups: [Group]?

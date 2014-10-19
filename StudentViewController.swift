@@ -10,6 +10,25 @@ import UIKit
 
 class StudentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet weak var attendaceButton: UIButton!
+    var attendanceMode:Bool = false
+    @IBAction func showAttendance(sender: AnyObject) {
+        if (attendanceMode == false) {
+            attendanceMode = true
+            NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
+                self.attendaceButton.highlighted = true
+                
+            }
+        }
+        else {
+            attendanceMode = false
+            NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
+                self.attendaceButton.highlighted = false
+            }
+
+        }
+        collectionView.reloadData()
+    }
     var studentList:[Student] = []
 
     override func viewDidLoad() {
@@ -51,6 +70,12 @@ class StudentViewController: UIViewController, UICollectionViewDataSource, UICol
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("StudentCell", forIndexPath: indexPath) as StudentViewCell
+        if (attendanceMode == true) {
+            cell.type = "attendance"
+        }
+        else {
+            cell.type = "roster"
+        }
         cell.student = studentList[indexPath.row]
         return cell
     }

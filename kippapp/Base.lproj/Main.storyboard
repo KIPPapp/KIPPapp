@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E2J-Wa-7tD">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -95,8 +94,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monika" translatesAutoresizingMaskIntoConstraints="NO" id="NcH-sS-heT">
-                                                    <rect key="frame" x="8" y="8" width="75" height="75"/>
+                                                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monika" translatesAutoresizingMaskIntoConstraints="NO" id="NcH-sS-heT">
+                                                    <rect key="frame" x="8" y="21" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="2Vx-aJ-6it"/>
                                                         <constraint firstAttribute="width" constant="75" id="BPI-TB-QVx"/>
@@ -111,11 +110,24 @@
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monika Gorkani" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycN-bV-dvK">
-                                                    <rect key="frame" x="5" y="93" width="83" height="12"/>
+                                                    <rect key="frame" x="5" y="103" width="83" height="12"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgY-EI-Ama">
+                                                    <rect key="frame" x="58" y="8" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="NaL-TP-Ga7"/>
+                                                        <constraint firstAttribute="height" constant="24" id="y45-gI-szb"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="check-inactive">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="checkIn:" destination="3gJ-2X-nFW" eventType="touchUpInside" id="BNW-0h-CUN"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -124,21 +136,24 @@
                                             <constraint firstAttribute="trailing" secondItem="ycN-bV-dvK" secondAttribute="trailing" constant="2" id="7TH-g9-6nb"/>
                                             <constraint firstItem="NcH-sS-heT" firstAttribute="leading" secondItem="3gJ-2X-nFW" secondAttribute="leadingMargin" constant="3" id="HaV-Ln-97f"/>
                                             <constraint firstItem="ycN-bV-dvK" firstAttribute="leading" secondItem="3gJ-2X-nFW" secondAttribute="leading" constant="5" id="Onf-5A-ydo"/>
-                                            <constraint firstItem="NcH-sS-heT" firstAttribute="top" secondItem="3gJ-2X-nFW" secondAttribute="topMargin" id="TIL-f2-1C0"/>
+                                            <constraint firstItem="NcH-sS-heT" firstAttribute="top" secondItem="3gJ-2X-nFW" secondAttribute="topMargin" constant="13" id="TIL-f2-1C0"/>
+                                            <constraint firstItem="vgY-EI-Ama" firstAttribute="leading" secondItem="3gJ-2X-nFW" secondAttribute="leading" constant="58" id="UIE-5N-U3K"/>
                                             <constraint firstItem="NcH-sS-heT" firstAttribute="top" secondItem="3gJ-2X-nFW" secondAttribute="topMargin" constant="8" id="cIb-EX-g6F"/>
                                             <constraint firstAttribute="centerX" secondItem="NcH-sS-heT" secondAttribute="centerX" id="cth-in-eQL"/>
-                                            <constraint firstItem="ycN-bV-dvK" firstAttribute="top" secondItem="NcH-sS-heT" secondAttribute="bottom" constant="10" id="q61-ye-cSK"/>
+                                            <constraint firstItem="vgY-EI-Ama" firstAttribute="top" secondItem="3gJ-2X-nFW" secondAttribute="top" constant="8" id="pl1-T7-sAK"/>
+                                            <constraint firstItem="ycN-bV-dvK" firstAttribute="top" secondItem="NcH-sS-heT" secondAttribute="bottom" constant="7" id="q61-ye-cSK"/>
                                         </constraints>
                                         <size key="customSize" width="90" height="130"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="cIb-EX-g6F"/>
                                                 <exclude reference="HaV-Ln-97f"/>
+                                                <exclude reference="cIb-EX-g6F"/>
                                             </mask>
                                         </variation>
                                         <connections>
                                             <outlet property="firstNameLabel" destination="ycN-bV-dvK" id="Wnb-tF-a8g"/>
                                             <outlet property="profileViewImage" destination="NcH-sS-heT" id="L3i-sw-kRR"/>
+                                            <outlet property="studentState" destination="vgY-EI-Ama" id="vAa-S0-otx"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -178,8 +193,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monika" translatesAutoresizingMaskIntoConstraints="NO" id="LFi-kK-fo4">
-                                                    <rect key="frame" x="8" y="8" width="75" height="75"/>
+                                                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monika" translatesAutoresizingMaskIntoConstraints="NO" id="LFi-kK-fo4">
+                                                    <rect key="frame" x="7" y="18" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="KcR-f3-ZdP"/>
                                                         <constraint firstAttribute="width" constant="75" id="hmv-dF-HNg"/>
@@ -194,22 +209,37 @@
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monika Gorkani" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7Y-u2-ivV">
-                                                    <rect key="frame" x="5" y="93" width="83" height="12"/>
+                                                    <rect key="frame" x="5" y="101" width="83" height="12"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M46-HJ-mSu">
+                                                    <rect key="frame" x="58" y="8" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="Dyz-4w-aja"/>
+                                                        <constraint firstAttribute="height" constant="24" id="ykZ-kg-KMK"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="grey-star">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="setCelebrate:" destination="O0h-Ce-Cjm" eventType="touchUpInside" id="0ul-AK-Ktg"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="centerX" secondItem="LFi-kK-fo4" secondAttribute="centerX" id="2il-vM-D2j"/>
-                                            <constraint firstItem="l7Y-u2-ivV" firstAttribute="top" secondItem="LFi-kK-fo4" secondAttribute="bottom" constant="10" id="2tf-gm-JrE"/>
+                                            <constraint firstItem="l7Y-u2-ivV" firstAttribute="top" secondItem="LFi-kK-fo4" secondAttribute="bottom" constant="8" id="2tf-gm-JrE"/>
+                                            <constraint firstItem="M46-HJ-mSu" firstAttribute="leading" secondItem="O0h-Ce-Cjm" secondAttribute="leading" constant="58" id="KV7-hN-ECt"/>
                                             <constraint firstItem="LFi-kK-fo4" firstAttribute="top" secondItem="O0h-Ce-Cjm" secondAttribute="topMargin" constant="8" id="NP3-oc-nac"/>
-                                            <constraint firstItem="LFi-kK-fo4" firstAttribute="top" secondItem="O0h-Ce-Cjm" secondAttribute="topMargin" id="SL3-ns-yPz"/>
+                                            <constraint firstItem="LFi-kK-fo4" firstAttribute="top" secondItem="O0h-Ce-Cjm" secondAttribute="topMargin" constant="10" id="SL3-ns-yPz"/>
                                             <constraint firstItem="LFi-kK-fo4" firstAttribute="leading" secondItem="O0h-Ce-Cjm" secondAttribute="leadingMargin" constant="3" id="SUm-7A-D5Q"/>
                                             <constraint firstAttribute="trailing" secondItem="l7Y-u2-ivV" secondAttribute="trailing" constant="2" id="SvM-kr-ZSo"/>
+                                            <constraint firstItem="M46-HJ-mSu" firstAttribute="top" secondItem="O0h-Ce-Cjm" secondAttribute="top" constant="8" id="ZzP-RR-Aym"/>
                                             <constraint firstItem="l7Y-u2-ivV" firstAttribute="leading" secondItem="O0h-Ce-Cjm" secondAttribute="leading" constant="5" id="q61-dk-24n"/>
                                         </constraints>
                                         <size key="customSize" width="90" height="130"/>
@@ -222,6 +252,7 @@
                                         <connections>
                                             <outlet property="firstNameLabel" destination="l7Y-u2-ivV" id="TM2-bT-6vX"/>
                                             <outlet property="profileViewImage" destination="LFi-kK-fo4" id="VRl-gF-Qdi"/>
+                                            <outlet property="studentState" destination="M46-HJ-mSu" id="bcw-lp-t44"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -317,10 +348,10 @@
             </objects>
             <point key="canvasLocation" x="757" y="-34"/>
         </scene>
-        <!--Checkin-->
+        <!--Checkin Navigation-->
         <scene sceneID="Hb9-O9-DZR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ltZ-FM-Nvs" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ltZ-FM-Nvs" userLabel="Checkin Navigation" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Checkin" image="checkin" id="h1J-iC-Of3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="brW-Ke-0KB">
@@ -556,8 +587,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monika" translatesAutoresizingMaskIntoConstraints="NO" id="rNg-wH-bCM">
-                                                    <rect key="frame" x="8" y="8" width="75" height="75"/>
+                                                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monika" translatesAutoresizingMaskIntoConstraints="NO" id="rNg-wH-bCM">
+                                                    <rect key="frame" x="8" y="18" width="75" height="75"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="ClD-ci-YKj"/>
                                                         <constraint firstAttribute="width" constant="75" id="CoG-3g-PCx"/>
@@ -572,23 +604,35 @@
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monika Gorkani" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfC-ef-oTH">
-                                                    <rect key="frame" x="5" y="93" width="83" height="12"/>
+                                                    <rect key="frame" x="4" y="99" width="83" height="12"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dK4-Ph-I2r">
+                                                    <rect key="frame" x="58" y="8" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="91u-7n-VMM"/>
+                                                        <constraint firstAttribute="width" constant="24" id="I9t-Cr-Kqv"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="Button-warning-icon">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="AfC-ef-oTH" firstAttribute="top" secondItem="rNg-wH-bCM" secondAttribute="bottom" constant="10" id="3sX-rb-fop"/>
-                                            <constraint firstAttribute="trailing" secondItem="AfC-ef-oTH" secondAttribute="trailing" constant="2" id="5XY-pz-Fho"/>
+                                            <constraint firstItem="AfC-ef-oTH" firstAttribute="top" secondItem="rNg-wH-bCM" secondAttribute="bottom" constant="6" id="3sX-rb-fop"/>
+                                            <constraint firstAttribute="trailing" secondItem="AfC-ef-oTH" secondAttribute="trailing" constant="3" id="5XY-pz-Fho"/>
+                                            <constraint firstItem="dK4-Ph-I2r" firstAttribute="leading" secondItem="W2u-0g-2RX" secondAttribute="leading" constant="58" id="609-ck-Xz8"/>
+                                            <constraint firstItem="dK4-Ph-I2r" firstAttribute="top" secondItem="W2u-0g-2RX" secondAttribute="top" constant="8" id="I9H-D7-8LD"/>
                                             <constraint firstItem="rNg-wH-bCM" firstAttribute="top" secondItem="W2u-0g-2RX" secondAttribute="topMargin" constant="8" id="VQt-rr-pTJ"/>
                                             <constraint firstAttribute="centerX" secondItem="rNg-wH-bCM" secondAttribute="centerX" id="cnb-vc-kwt"/>
-                                            <constraint firstItem="AfC-ef-oTH" firstAttribute="leading" secondItem="W2u-0g-2RX" secondAttribute="leading" constant="5" id="dyd-rK-6rg"/>
+                                            <constraint firstItem="AfC-ef-oTH" firstAttribute="leading" secondItem="W2u-0g-2RX" secondAttribute="leading" constant="4" id="dyd-rK-6rg"/>
                                             <constraint firstItem="rNg-wH-bCM" firstAttribute="leading" secondItem="W2u-0g-2RX" secondAttribute="leadingMargin" constant="3" id="qvn-qv-CyB"/>
-                                            <constraint firstItem="rNg-wH-bCM" firstAttribute="top" secondItem="W2u-0g-2RX" secondAttribute="topMargin" id="wEw-IF-AD6"/>
+                                            <constraint firstItem="rNg-wH-bCM" firstAttribute="top" secondItem="W2u-0g-2RX" secondAttribute="topMargin" constant="10" id="wEw-IF-AD6"/>
                                         </constraints>
                                         <size key="customSize" width="90" height="130"/>
                                         <variation key="default">
@@ -600,6 +644,7 @@
                                         <connections>
                                             <outlet property="firstNameLabel" destination="AfC-ef-oTH" id="CgM-3z-FWz"/>
                                             <outlet property="profileViewImage" destination="rNg-wH-bCM" id="gxX-uG-rov"/>
+                                            <outlet property="studentState" destination="dK4-Ph-I2r" id="4OS-X8-GPw"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -613,14 +658,30 @@
                             <constraint firstAttribute="trailing" secondItem="SsI-2O-f5f" secondAttribute="trailing" id="vwb-zZ-MtY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Students" id="Fey-kl-3FR"/>
+                    <navigationItem key="navigationItem" title="Students" id="Fey-kl-3FR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="pvG-3U-mKr">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sdu-AZ-xIa">
+                                <rect key="frame" x="451" y="7" width="42" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="attendance-inactive">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="attendance-active"/>
+                                <state key="highlighted" image="attendance-active"/>
+                                <connections>
+                                    <action selector="showAttendance:" destination="km5-5O-ECp" eventType="touchUpInside" id="uE7-LL-sVa"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="attendaceButton" destination="sdu-AZ-xIa" id="LfM-0A-phf"/>
                         <outlet property="collectionView" destination="SsI-2O-f5f" id="gmY-I4-Z2g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HsH-Ss-CyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2450" y="2436"/>
+            <point key="canvasLocation" x="2514" y="2436"/>
         </scene>
         <!--Student Profile Navigation-->
         <scene sceneID="mkB-cu-2bJ">
@@ -695,7 +756,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Button-warning-icon" width="24" height="24"/>
+        <image name="attendance-active" width="30" height="32"/>
+        <image name="attendance-inactive" width="30" height="31"/>
+        <image name="check-inactive" width="24" height="24"/>
         <image name="checkin" width="25" height="25"/>
+        <image name="grey-star" width="24" height="24"/>
         <image name="groups-selected" width="25" height="25"/>
         <image name="monika" width="100" height="100"/>
         <image name="profile-placeholder" width="100" height="100"/>

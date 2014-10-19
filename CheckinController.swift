@@ -52,7 +52,9 @@ class CheckinController: UIViewController, UICollectionViewDataSource, UICollect
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("StudentCell", forIndexPath: indexPath) as StudentViewCell
+        cell.type="checkin"
         cell.student = studentList[indexPath.row]
+      
         return cell
     }
     

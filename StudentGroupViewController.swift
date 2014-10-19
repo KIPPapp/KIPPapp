@@ -57,7 +57,8 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int
     {
-        return studentList.count
+       // return studentList.count
+        return 0
     }
     
     
@@ -65,7 +66,7 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("GradeViewCell") as GradeViewCell
+    var cell = tableView.dequeueReusableCellWithIdentifier("GradeViewCell") as GradeViewCell
         
         var checkItem: M13Checkbox = M13Checkbox()
         checkItem.enabled = false
@@ -87,8 +88,7 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
         }
         cell.checkBoxContainer.addSubview(checkItem)
         cell.student = studentList[indexPath.row]
-        return cell
-        
+        return cell 
     }
     
     

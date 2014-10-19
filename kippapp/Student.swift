@@ -23,9 +23,10 @@ class Student
     var minLastWeek: Int = 0
     var imagePath:String = "monika_square.png"
     var attendance:String = "notset"
-    
+    var celebrated:Bool = false
     var subjects: [Subject]?
     var groups: [Group]?
+    var checkedIn:Bool = false
     
     
     init()

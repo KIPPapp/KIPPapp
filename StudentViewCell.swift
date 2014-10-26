@@ -50,10 +50,11 @@ class StudentViewCell: UICollectionViewCell {
         
         self.firstNameLabel.text = student!.name
         
-        profileViewImage.layer.borderWidth = 2.0
+       
+        setupAttendanceColor()
         if (type == "roster") {
            studentState.hidden = false
-           profileViewImage.layer.borderColor = UIColor.grayColor().CGColor
+         
             if (student!.progress > 1.0  && student!.mastery >= student!.progress - 3) {
                 studentState.setImage(UIImage(named:"ok-small.png"),forState: UIControlState.Normal)           }
             else {
@@ -61,7 +62,7 @@ class StudentViewCell: UICollectionViewCell {
             }
         
         } else if (type == "attendance") {
-            setupAttendanceColor()
+           
             self.studentState.hidden = true
         }
         else if (type == "celebrate") {
@@ -88,7 +89,7 @@ class StudentViewCell: UICollectionViewCell {
     }
     
     func profileImageTapped(sender: UITapGestureRecognizer) {
-        println("tapped image")
+       
         if (type == "attendance") {
             // for now do nothing
             if (student!.attendance=="notset") {
@@ -115,6 +116,7 @@ class StudentViewCell: UICollectionViewCell {
     }
     
     func setupAttendanceColor() {
+        profileViewImage.layer.borderWidth = 3.0
         if (student!.attendance == "present") {
              profileViewImage.layer.borderColor = UIColor.greenColor().CGColor
         }
@@ -125,7 +127,7 @@ class StudentViewCell: UICollectionViewCell {
             profileViewImage.layer.borderColor = UIColor.yellowColor().CGColor
         }
         else {
-           profileViewImage.layer.borderColor = UIColor.whiteColor().CGColor
+           profileViewImage.layer.borderColor = UIColor.lightGrayColor().CGColor
         }
 
     }

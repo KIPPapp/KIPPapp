@@ -42,11 +42,29 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
         profileImageView.clipsToBounds = true
         profileImageView.layer.cornerRadius = 50
         profileImageView.image = UIImage(named: student!.imagePath)
+        setupAttendanceColor()
+        
         stats = ["Attendance","Progress","Mastery","Number of Tries","Min Last Week"]
         
     }
 
-    
+    func setupAttendanceColor() {
+        profileImageView.layer.borderWidth = 3.0
+        if (student!.attendance == "present") {
+            profileImageView.layer.borderColor = UIColor.greenColor().CGColor
+        }
+        else if (student!.attendance == "absent") {
+            profileImageView.layer.borderColor = UIColor.redColor().CGColor
+        }
+        else if (student!.attendance == "tardy") {
+            profileImageView.layer.borderColor = UIColor.yellowColor().CGColor
+        }
+        else {
+            profileImageView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        }
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -55,7 +73,7 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: 148, height: 80)
         collectionView.collectionViewLayout = layout
-        collectionView.backgroundColor = UIColor.lightGrayColor()
+        collectionView.backgroundColor = UIColor(red: 96/255, green: 162/255, blue: 215/255, alpha: 1.0)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.reloadData();

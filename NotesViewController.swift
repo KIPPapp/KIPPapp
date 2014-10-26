@@ -9,6 +9,10 @@
 import UIKit
 
 class NotesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+  
+    var notes:[[String:String]] = [["note":"this is cool","date":"10/14/2014"]]
+       
 
     @IBAction func goBack(sender: AnyObject) {
         
@@ -41,7 +45,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return notes.count
     }
     
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
@@ -58,6 +62,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
       //  cell.layer.masksToBounds = true
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         cell.layer.borderColor = UIColor.lightGrayColor().CGColor
+        
      //   cell.layer.borderWidth = 1.0
         return cell;
     }

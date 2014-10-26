@@ -8,9 +8,12 @@
 
 import UIKit
 
-class CheckinController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
+
+class CheckinController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, StudentViewer {
     
     var studentList:[Student] = []
+    var selectedStudent:Student? = nil
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -23,7 +26,7 @@ class CheckinController: UIViewController, UICollectionViewDataSource, UICollect
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        self.view.showActivityViewWithLabel("Loading")
+      
         var parseAPI:ParseAPI = (self.tabBarController as KippAppController).parseAPI
         parseAPI.getStudentData("Mia Hamm", grade:"Secondary Intervention") { (students, groups, error) -> () in
             for student in students! {
@@ -31,7 +34,7 @@ class CheckinController: UIViewController, UICollectionViewDataSource, UICollect
                     self.studentList.append(student)
                 }
             }
-            self.view.hideActivityView()
+          
             self.collectionView.reloadData()
             
         }
@@ -39,6 +42,23 @@ class CheckinController: UIViewController, UICollectionViewDataSource, UICollect
         
         // Do any additional setup after loading the view.
     }
+    
+    func showStudent(student:Student) {
+        selectedStudent = student
+        performSegueWithIdentifier("showProfile", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showProfile") {
+            let navigationController = segue.destinationViewController as UINavigationController
+            let detailViewController = navigationController.viewControllers[0] as StudentProfilePageViewController
+            detailViewController.student = selectedStudent
+            
+        }
+        
+    }
+
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,6 +74,7 @@ class CheckinController: UIViewController, UICollectionViewDataSource, UICollect
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("StudentCell", forIndexPath: indexPath) as StudentViewCell
         cell.type="checkin"
         cell.student = studentList[indexPath.row]
+        cell.delegate = self
       
         return cell
     }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BFA99E345A51997247C54FCD"
+               BlueprintIdentifier = "BC41688AEDF4A3AE0073CAF3"
                BuildableName = "libPods-RNActivityView.a"
                BlueprintName = "Pods-RNActivityView"
                ReferencedContainer = "container:Pods.xcodeproj">

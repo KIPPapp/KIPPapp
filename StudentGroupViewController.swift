@@ -104,20 +104,7 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "showAcademicRecord") {
-            
-            var indexPath:NSIndexPath = self.tableView.indexPathForSelectedRow()!
-            let student = studentList[indexPath.row]
-            
-            let navigationController = segue.destinationViewController as UINavigationController
-            let detailViewController = navigationController.viewControllers[0] as StudentAcademicPageViewController
-            detailViewController.student = student
-            
-        }
-        
-    }
-
+  
     
     
     /*

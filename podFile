@@ -7,4 +7,5 @@ pod 'RNActivityView'
 pod 'Parse'
 pod 'M13Checkbox'
 pod 'EDHexColor'
+pod 'CWPopup', '~> 1.2.4'
 

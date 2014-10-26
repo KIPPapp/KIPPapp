@@ -8,3 +8,4 @@
 #import "UIColor+EDHexColor.h"
 #import "UIImageView+AFNetworking.h"
 #import "UIView+RNActivityView.h"
+#import "UIViewController+CWPopup.h"

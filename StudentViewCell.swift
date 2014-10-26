@@ -17,6 +17,8 @@ class StudentViewCell: UICollectionViewCell {
     
     @IBOutlet weak var firstNameLabel: UILabel!
     
+     weak var delegate:StudentViewer?
+    
     var student:Student? = nil {
         didSet {
             self.setUpContent()
@@ -105,6 +107,9 @@ class StudentViewCell: UICollectionViewCell {
                 profileViewImage.layer.borderColor = UIColor.greenColor().CGColor
                 student!.attendance = "present"
             }
+        }
+        else {
+            self.delegate!.showStudent(student!)
         }
         
     }

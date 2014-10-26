@@ -8,10 +8,18 @@
 
 import UIKit
 
-class StudentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+protocol StudentViewer : class
+{
+    func showStudent(student:Student)
+    
+}
+
+
+class StudentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, StudentViewer {
     
     @IBOutlet weak var attendaceButton: UIButton!
     var attendanceMode:Bool = false
+    var selectedStudent:Student? = nil
     @IBAction func showAttendance(sender: AnyObject) {
         if (attendanceMode == false) {
             attendanceMode = true
@@ -33,6 +41,7 @@ class StudentViewController: UIViewController, UICollectionViewDataSource, UICol
 
     override func viewDidLoad() {
         super.viewDidLoad()
+   //     self.collectionView.showActivityViewWithLabel("Loading")
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: 85, height: 130)
@@ -43,13 +52,13 @@ class StudentViewController: UIViewController, UICollectionViewDataSource, UICol
         
         var parseAPI:ParseAPI = (self.tabBarController as KippAppController).parseAPI
         
-        self.view.showActivityViewWithLabel("Loading")
+       
         parseAPI.getStudentData("Mia Hamm", grade:"Secondary Intervention") { (students, groups,error) -> () in
             for student in students! {
                 self.studentList.append(student)
             }
             self.studentList.sort({$0.name.localizedCaseInsensitiveCompare($1.name) == NSComparisonResult.OrderedAscending})
-            self.view.hideActivityView()
+     //       self.collectionView.hideActivityView()
             self.collectionView.reloadData()
             
         }
@@ -63,6 +72,11 @@ class StudentViewController: UIViewController, UICollectionViewDataSource, UICol
         // Dispose of any resources that can be recreated.
     }
     
+    func showStudent(student:Student) {
+        selectedStudent = student
+        performSegueWithIdentifier("showProfile", sender: self)
+    }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return studentList.count
     }
@@ -70,6 +84,7 @@ class StudentViewController: UIViewController, UICollectionViewDataSource, UICol
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("StudentCell", forIndexPath: indexPath) as StudentViewCell
+        cell.delegate = self
         if (attendanceMode == true) {
             cell.type = "attendance"
         }
@@ -80,7 +95,15 @@ class StudentViewController: UIViewController, UICollectionViewDataSource, UICol
         return cell
     }
 
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showProfile") {
+            let navigationController = segue.destinationViewController as UINavigationController
+            let detailViewController = navigationController.viewControllers[0] as StudentProfilePageViewController
+            detailViewController.student = selectedStudent
+            
+        }
+        
+    }
 
     @IBOutlet weak var collectionView: UICollectionView!
     /*

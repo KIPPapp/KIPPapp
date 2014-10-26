@@ -8,9 +8,27 @@
 
 import UIKit
 
-class CelebrateController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class CelebrateController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, StudentViewer {
     
     var studentList:[Student] = []
+    var selectedStudent:Student? = nil
+    
+    
+    func showStudent(student:Student) {
+        selectedStudent = student
+        performSegueWithIdentifier("showProfile", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showProfile") {
+            let navigationController = segue.destinationViewController as UINavigationController
+            let detailViewController = navigationController.viewControllers[0] as StudentProfilePageViewController
+            detailViewController.student = selectedStudent
+            
+        }
+        
+    }
+
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -54,6 +72,7 @@ class CelebrateController: UIViewController, UICollectionViewDataSource, UIColle
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("StudentCell", forIndexPath: indexPath) as StudentViewCell
         cell.type = "celebrate"
         cell.student = studentList[indexPath.row]
+        cell.delegate = self
        
         return cell
     }

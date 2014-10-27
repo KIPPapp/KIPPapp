@@ -10,6 +10,7 @@ import UIKit
 
 class StudentProfilePageViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet weak var starImage: UIImageView!
   
     @IBAction func goToNotes(sender: AnyObject) {
         
@@ -24,6 +25,8 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
     
     var stats:[String] = [String]()
     
+    @IBOutlet weak var masteredLabel: UILabel!
+    @IBOutlet weak var progressLabel: UILabel!
     
     @IBOutlet weak var notesView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -43,6 +46,9 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
         profileImageView.layer.cornerRadius = 50
         profileImageView.image = UIImage(named: student!.imagePath)
         setupAttendanceColor()
+        
+        masteredLabel.text =  NSString(format: "%.1f %%", student!.mastery)
+        progressLabel.text = NSString(format: "%.1f %%", student!.progress)
         
         stats = ["Attendance","Progress","Mastery","Number of Tries","Min Last Week"]
         
@@ -73,7 +79,7 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: 148, height: 80)
         collectionView.collectionViewLayout = layout
-        collectionView.backgroundColor = UIColor(red: 96/255, green: 162/255, blue: 215/255, alpha: 1.0)
+        collectionView.backgroundColor = UIColor(red: 59/255, green: 98/255, blue: 157/255, alpha: 1.0)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.reloadData();
@@ -114,6 +120,8 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
         else if (labelName == "Min Last Week") {
              cell.statValueLabel.text =  NSString(format: "%d", student!.minLastWeek)
         }
+        
+        
         
         return cell
     }

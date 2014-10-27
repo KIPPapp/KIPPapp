@@ -17,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Parse.setApplicationId("lBPSDIoTAM8XqaPfXEWCes2C6VI8QEsWNOSGOWP8", clientKey: "sPaVYk2zS3Vz4P0BAWUyGp9CvvP27bkqipQa03Pu")
+        
+        // Override point for customization after application launch.
+        UINavigationBar.appearance().backgroundColor = UIColor(red: 59/255, green: 98/255, blue: 167/255, alpha: 1.0)
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 59/255, green: 98/255, blue: 167/255, alpha: 1.0)
+        
+        
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UINavigationBar.appearance().titleTextAttributes = titleDict
+     
+    /*    UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red: 59/255, green: 98/255, blue: 167/255, alpha: 1.0)],forState: UIControlState.Selected) */
+        
         return true
     }
 

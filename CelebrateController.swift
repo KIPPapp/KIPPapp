@@ -37,7 +37,7 @@ class CelebrateController: UIViewController, UICollectionViewDataSource, UIColle
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: 85, height: 130)
         collectionView.collectionViewLayout = layout
-        collectionView.backgroundColor = UIColor.whiteColor()
+        collectionView.backgroundColor = UIColor(red: 239/255, green: 248/255, blue: 255/255, alpha: 1.0)
         collectionView.dataSource = self
         collectionView.delegate = self
         self.view.showActivityViewWithLabel("Loading")
@@ -73,6 +73,7 @@ class CelebrateController: UIViewController, UICollectionViewDataSource, UIColle
         cell.type = "celebrate"
         cell.student = studentList[indexPath.row]
         cell.delegate = self
+        cell.backgroundColor = UIColor(red: 239/255, green: 248/255, blue: 255/255, alpha: 1.0)
        
         return cell
     }

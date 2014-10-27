@@ -46,7 +46,7 @@ class StudentViewController: UIViewController, UICollectionViewDataSource, UICol
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: 85, height: 130)
         collectionView.collectionViewLayout = layout
-        collectionView.backgroundColor = UIColor.whiteColor()
+        collectionView.backgroundColor = UIColor(red: 239/255, green: 248/255, blue: 255/255, alpha: 1.0)
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -84,6 +84,8 @@ class StudentViewController: UIViewController, UICollectionViewDataSource, UICol
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("StudentCell", forIndexPath: indexPath) as StudentViewCell
+        cell.backgroundColor = UIColor(red: 239/255, green: 248/255, blue: 255/255, alpha: 1.0)
+
         cell.delegate = self
         if (attendanceMode == true) {
             cell.type = "attendance"

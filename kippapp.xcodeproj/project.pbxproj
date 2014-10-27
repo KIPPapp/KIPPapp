@@ -31,6 +31,10 @@
 		5DB6C29A19EB842000F1DAF3 /* KippAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6C29919EB842000F1DAF3 /* KippAppController.swift */; };
 		5DB6C2CE19F33D0500F1DAF3 /* StudentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6C2CD19F33D0500F1DAF3 /* StudentViewCell.swift */; };
 		78BB434D4193D4750AA3749A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0DC0C77BED9C0777DAC71F /* libPods.a */; };
+		7ECE38BA19FDCD23000BEBFE /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECE38B919FDCD23000BEBFE /* PopUpViewController.xib */; };
+		7ECE38BC19FDCD7B000BEBFE /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE38BB19FDCD7B000BEBFE /* PopUpViewController.swift */; };
+		7ECE38C419FDDDC6000BEBFE /* ShowPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE38C319FDDDC6000BEBFE /* ShowPopupViewController.swift */; };
+		7ECE38CC19FDE1C6000BEBFE /* PopUpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECE38CB19FDE1C6000BEBFE /* PopUpViewController_iPad.xib */; };
 		BAC8398A19EB57FF0067E9AB /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8398519EB57FF0067E9AB /* Group.swift */; };
 		BAC8398B19EB57FF0067E9AB /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8398619EB57FF0067E9AB /* Parent.swift */; };
 		BAC8398C19EB57FF0067E9AB /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8398719EB57FF0067E9AB /* Student.swift */; };
@@ -80,6 +84,10 @@
 		5DB6C29619EB5C7800F1DAF3 /* ParseApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseApi.swift; sourceTree = "<group>"; };
 		5DB6C29919EB842000F1DAF3 /* KippAppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KippAppController.swift; sourceTree = "<group>"; };
 		5DB6C2CD19F33D0500F1DAF3 /* StudentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewCell.swift; sourceTree = "<group>"; };
+		7ECE38B919FDCD23000BEBFE /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
+		7ECE38BB19FDCD7B000BEBFE /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		7ECE38C319FDDDC6000BEBFE /* ShowPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPopupViewController.swift; sourceTree = "<group>"; };
+		7ECE38CB19FDE1C6000BEBFE /* PopUpViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController_iPad.xib; sourceTree = "<group>"; };
 		BAC8398519EB57FF0067E9AB /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = kippapp/Group.swift; sourceTree = "<group>"; };
 		BAC8398619EB57FF0067E9AB /* Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parent.swift; path = kippapp/Parent.swift; sourceTree = "<group>"; };
 		BAC8398719EB57FF0067E9AB /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = kippapp/Student.swift; sourceTree = "<group>"; };
@@ -109,6 +117,7 @@
 		5D2FBD3A19E221EA00621E49 = {
 			isa = PBXGroup;
 			children = (
+				7ECE38C619FDE099000BEBFE /* NMPopUpViewController */,
 				5DB6C29519EB5C4D00F1DAF3 /* api */,
 				BAC8398419EB57BE0067E9AB /* Models */,
 				5D703CC219EA41770031FDDB /* Views */,
@@ -182,6 +191,7 @@
 				5D703CBC19EA3A3C0031FDDB /* CheckinController.swift */,
 				5D703CB919EA39920031FDDB /* CelebrateController.swift */,
 				5D7A9CD519F34EDB00E14D00 /* StudentViewController.swift */,
+				7ECE38C319FDDDC6000BEBFE /* ShowPopupViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -205,6 +215,24 @@
 				5DB6C29619EB5C7800F1DAF3 /* ParseApi.swift */,
 			);
 			name = api;
+			sourceTree = "<group>";
+		};
+		7ECE38C619FDE099000BEBFE /* NMPopUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7ECE38CA19FDE1AA000BEBFE /* iPad */,
+				7ECE38BB19FDCD7B000BEBFE /* PopUpViewController.swift */,
+				7ECE38B919FDCD23000BEBFE /* PopUpViewController.xib */,
+			);
+			name = NMPopUpViewController;
+			sourceTree = "<group>";
+		};
+		7ECE38CA19FDE1AA000BEBFE /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				7ECE38CB19FDE1C6000BEBFE /* PopUpViewController_iPad.xib */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 		9F3E310706915E82B2E1A3F3 /* Pods */ = {
@@ -318,9 +346,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECE38CC19FDE1C6000BEBFE /* PopUpViewController_iPad.xib in Resources */,
 				5D2FBD4E19E221EA00621E49 /* Main.storyboard in Resources */,
 				5D2FBD5319E221EA00621E49 /* LaunchScreen.xib in Resources */,
 				5D2FBD5019E221EA00621E49 /* Images.xcassets in Resources */,
+				7ECE38BA19FDCD23000BEBFE /* PopUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,8 +409,10 @@
 				5D7A9CD919F45ED600E14D00 /* GradeSelectCell.swift in Sources */,
 				5DB6C29A19EB842000F1DAF3 /* KippAppController.swift in Sources */,
 				5D30E96719EAEC1A00640C1C /* StudentProfilePageViewController.swift in Sources */,
+				7ECE38C419FDDDC6000BEBFE /* ShowPopupViewController.swift in Sources */,
 				006A939519EB1A60000947F5 /* StudentMasterViewController.swift in Sources */,
 				BAC8398E19EB57FF0067E9AB /* Teacher.swift in Sources */,
+				7ECE38BC19FDCD7B000BEBFE /* PopUpViewController.swift in Sources */,
 				5DB129A619FCAC40002A9B0F /* NoteDetailController.swift in Sources */,
 				BAC8398A19EB57FF0067E9AB /* Group.swift in Sources */,
 				5D703CBA19EA39920031FDDB /* CelebrateController.swift in Sources */,
@@ -520,7 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = kippapp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "kippapp/kippapp-Bridging-Header.h";
@@ -535,7 +567,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = kippapp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "kippapp/kippapp-Bridging-Header.h";

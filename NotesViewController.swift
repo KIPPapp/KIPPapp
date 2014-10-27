@@ -14,6 +14,8 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     var notes:[[String:String]] = [["note":"this is cool","date":"10/14/2014"]]
        
 
+     var popViewController : PopUpViewControllerSwift!
+    
     @IBAction func goBack(sender: AnyObject) {
         
         dismissViewControllerAnimated(true, completion: { () -> Void in
@@ -35,7 +37,20 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBAction func createNew(sender: AnyObject) {
         
-         performSegueWithIdentifier("showDetailNote", sender: self)
+  //       performSegueWithIdentifier("showDetailNote", sender: self)
+        
+ /*       if (UIDevice.currentDevice().userInterfaceIdiom == .Pad)
+        {
+            self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController_iPad", bundle: nil)
+            self.popViewController.title = "This is a popup view"
+            self.popViewController.showInView(self.view, withImage: UIImage(named: "typpzDemo"), withMessage: "You just triggered a great popup window", animated: true)
+        } else
+        { */
+            self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController", bundle: nil)
+            self.popViewController.title = "This is a popup view"
+            self.popViewController.showInView(self.view, withImage: UIImage(named: "typpzDemo"), withMessage: "Note... ", animated: true)
+  //      }
+
     }
 
     override func didReceiveMemoryWarning() {

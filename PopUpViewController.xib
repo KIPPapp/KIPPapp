@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -15,11 +16,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pon-Sf-YGC">
-                    <rect key="frame" x="40" y="100" width="240" height="368"/>
+                    <rect key="frame" x="40" y="100" width="460" height="400"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2p-8A-CXS">
                             <rect key="frame" x="10" y="10" width="48" height="30"/>
@@ -31,13 +32,13 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHf-rX-jc9">
-                            <rect key="frame" x="196" y="10" width="34" height="30"/>
+                            <rect key="frame" x="406" y="10" width="34" height="30"/>
                             <state key="normal" title="Save">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXU-09-hjz">
-                            <rect key="frame" x="10" y="65" width="220" height="278"/>
+                            <rect key="frame" x="10" y="65" width="430" height="310"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <attributedString key="attributedText"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -47,7 +48,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="Q2p-8A-CXS" firstAttribute="leading" secondItem="Pon-Sf-YGC" secondAttribute="leading" constant="10" id="1mW-YP-vN4"/>
-                        <constraint firstAttribute="trailing" secondItem="BHf-rX-jc9" secondAttribute="trailing" constant="10" id="4jC-1z-nuu"/>
+                        <constraint firstAttribute="trailing" secondItem="BHf-rX-jc9" secondAttribute="trailing" constant="20" id="4jC-1z-nuu"/>
                         <constraint firstItem="xXU-09-hjz" firstAttribute="leading" secondItem="Q2p-8A-CXS" secondAttribute="leading" id="96c-qX-DBB"/>
                         <constraint firstItem="BHf-rX-jc9" firstAttribute="centerY" secondItem="Q2p-8A-CXS" secondAttribute="centerY" id="NL2-bW-8Fl"/>
                         <constraint firstItem="xXU-09-hjz" firstAttribute="top" secondItem="BHf-rX-jc9" secondAttribute="bottom" constant="25" id="TsB-1E-v4t"/>
@@ -61,15 +62,16 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Pon-Sf-YGC" secondAttribute="bottom" constant="100" id="2eW-uF-Soc"/>
                 <constraint firstItem="Pon-Sf-YGC" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="40" id="9OE-R9-gaB"/>
-                <constraint firstAttribute="trailing" secondItem="Pon-Sf-YGC" secondAttribute="trailing" constant="40" id="jg8-Ue-3p9"/>
+                <constraint firstAttribute="trailing" secondItem="Pon-Sf-YGC" secondAttribute="trailing" constant="100" id="jg8-Ue-3p9"/>
                 <constraint firstItem="Pon-Sf-YGC" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="qQG-Qc-ae7"/>
                 <constraint firstItem="Pon-Sf-YGC" firstAttribute="top" secondItem="1" secondAttribute="top" constant="100" id="vSs-rq-9C6"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="qQG-Qc-ae7"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="140" y="154"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

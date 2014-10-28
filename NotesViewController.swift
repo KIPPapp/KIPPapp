@@ -63,7 +63,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         return notes.count
     }
     
-    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         performSegueWithIdentifier("showDetailNote", sender: self)
         return indexPath
     }

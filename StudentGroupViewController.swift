@@ -16,38 +16,23 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = UIColor.whiteColor()
-        tableView.tintColor = UIColor.lightGrayColor()
-        tableView.separatorColor = UIColor.darkGrayColor()
-        
-        tableView.backgroundColor = UIColor.clearColor()
-        //UITableViewCellSeparatorStyleNone
-        tableView.opaque = true
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        
-        tableView.estimatedRowHeight = 100
-        
-        tableView.rowHeight = UITableViewAutomaticDimension
-        // Do any additional setup after loading the view.
-        var parseAPI:ParseAPI = (self.tabBarController as KippAppController).parseAPI
-        
-        self.view.showActivityViewWithLabel("Loading")
-        parseAPI.getStudentData("Mia Hamm", grade:"Secondary Intervention") { (students, groups,error) -> () in
-            for student in students! {
-                self.studentList.append(student)
-            }
-             self.studentList.sort({$0.name.localizedCaseInsensitiveCompare($1.name) == NSComparisonResult.OrderedAscending})
-            self.view.hideActivityView()
-            self.tableView.reloadData()
-            
-        }
+        tableView.delegate = self
 
-        
+        tableView.opaque = true
+      /*  tableView.separatorInset = UIEdgeInsetsMake (0, 15, 0,0);
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension*/
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func goBack(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -57,40 +42,23 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int
     {
-       // return studentList.count
-        return 0
+        return studentList.count
+        //return 0
     }
     
     
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        
-    var cell = tableView.dequeueReusableCellWithIdentifier("GradeViewCell") as GradeViewCell
-        
-        var checkItem: M13Checkbox = M13Checkbox()
-        checkItem.enabled = false
-        checkItem.checkState = M13CheckboxStateMixed
-        checkItem.strokeColor = UIColor.blackColor()
-        checkItem.checkColor = UIColor.blackColor()
-        if((indexPath.row % 3) == 0)
-        {
-            checkItem.checkState = M13CheckboxStateChecked
-            checkItem.radius = 5
-        }
-        else if((indexPath.row % 3) == 1)
-        {
-            checkItem.checkState = M13CheckboxStateMixed
-        }
-        else
-        {
-            checkItem.checkState = M13CheckboxStateUnchecked
-        }
-        cell.checkBoxContainer.addSubview(checkItem)
-        cell.student = studentList[indexPath.row]
+    var cell = tableView.dequeueReusableCellWithIdentifier("GroupStudentViewCell") as GroupStudentViewCell
+
+    cell.nameLabel.text = self.studentList[indexPath.row].name
+    cell.profileView.layer.masksToBounds = false
+    cell.profileView.clipsToBounds = true
+    cell.profileView.layer.cornerRadius = 50
+    cell.profileView.image = UIImage(named:self.studentList[indexPath.row].imagePath)
         return cell 
     }
-    
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -99,14 +67,22 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
         var indexSection = indexPath.section
         println("didSelectRowAtIndexPath indexSection = \(indexSection) indexRow = \(indexRow)")
         
-        
-        
     }
     
-    
-  
-    
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+      /*  if (segue.identifier == "showAcademicRecord") {
+            
+            var indexPath:NSIndexPath = self.tableView.indexPathForSelectedRow()!
+            let student = studentList[indexPath.row]
+            
+            let navigationController = segue.destinationViewController as UINavigationController
+            let detailViewController = navigationController.viewControllers[0] as StudentAcademicPageViewController
+            detailViewController.student = student
+            
+        }*/
+        
+    }
+
     /*
     // MARK: - Navigation
     

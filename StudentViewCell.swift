@@ -116,7 +116,7 @@ class StudentViewCell: UICollectionViewCell {
     }
     
     func setupAttendanceColor() {
-        profileViewImage.layer.borderWidth = 3.0
+        profileViewImage.layer.borderWidth = 5.0
         if (student!.attendance == "present") {
              profileViewImage.layer.borderColor = UIColor.greenColor().CGColor
         }

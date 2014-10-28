@@ -34,6 +34,7 @@ import QuartzCore
     
     func showInView(aView: UIView!, withImage image : UIImage!, withMessage message: String!, animated: Bool)
     {
+        self.view.frame = aView.bounds
         aView.addSubview(self.view)
 //        logoImg!.image = image
         messageBox!.text = message

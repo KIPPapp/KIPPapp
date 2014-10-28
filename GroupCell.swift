@@ -14,10 +14,10 @@ class GroupCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        self.layer.borderWidth = 1.5
-        self.layer.cornerRadius = 2.0
-        self.layer.borderColor = UIColor.grayColor().CGColor
-        self.backgroundColor = UIColor(red: CGFloat(Float(arc4random()) / Float(UINT32_MAX)), green: CGFloat(Float(arc4random()) / Float(UINT32_MAX)), blue: CGFloat(Float(arc4random()) / Float(UINT32_MAX)), alpha: CGFloat(Float(arc4random()) / Float(UINT32_MAX)))
+/*        self.layer.borderWidth = 0.0
+       self.layer.cornerRadius = 1.0
+        self.layer.borderColor = UIColor.blackColor().CGColor
+        self.backgroundColor = UIColor(red: CGFloat(Float(arc4random()) / Float(UINT32_MAX)), green: CGFloat(Float(arc4random()) / Float(UINT32_MAX)), blue: CGFloat(Float(arc4random()) / Float(UINT32_MAX)), alpha: CGFloat(Float(arc4random()) / Float(UINT32_MAX)))*/
     }
     
     var group:String? = nil {

@@ -36,6 +36,7 @@
 		7ECE38BC19FDCD7B000BEBFE /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE38BB19FDCD7B000BEBFE /* PopUpViewController.swift */; };
 		7ECE38C419FDDDC6000BEBFE /* ShowPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE38C319FDDDC6000BEBFE /* ShowPopupViewController.swift */; };
 		7ECE38CC19FDE1C6000BEBFE /* PopUpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECE38CB19FDE1C6000BEBFE /* PopUpViewController_iPad.xib */; };
+		BA21F9E019FF54C100066001 /* GroupStudentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21F9DF19FF54C100066001 /* GroupStudentViewCell.swift */; };
 		BAC8398A19EB57FF0067E9AB /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8398519EB57FF0067E9AB /* Group.swift */; };
 		BAC8398B19EB57FF0067E9AB /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8398619EB57FF0067E9AB /* Parent.swift */; };
 		BAC8398C19EB57FF0067E9AB /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8398719EB57FF0067E9AB /* Student.swift */; };
@@ -91,6 +92,7 @@
 		7ECE38BB19FDCD7B000BEBFE /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		7ECE38C319FDDDC6000BEBFE /* ShowPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPopupViewController.swift; sourceTree = "<group>"; };
 		7ECE38CB19FDE1C6000BEBFE /* PopUpViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController_iPad.xib; sourceTree = "<group>"; };
+		BA21F9DF19FF54C100066001 /* GroupStudentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupStudentViewCell.swift; sourceTree = "<group>"; };
 		BAC8398519EB57FF0067E9AB /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = kippapp/Group.swift; sourceTree = "<group>"; };
 		BAC8398619EB57FF0067E9AB /* Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parent.swift; path = kippapp/Parent.swift; sourceTree = "<group>"; };
 		BAC8398719EB57FF0067E9AB /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = kippapp/Student.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		5D703CC219EA41770031FDDB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA21F9DF19FF54C100066001 /* GroupStudentViewCell.swift */,
 				5DB129A319FCA3DB002A9B0F /* NotesViewCell.swift */,
 				5D7A9CD719F45ED600E14D00 /* GradeSelectCell.swift */,
 				5D7A9CD819F45ED600E14D00 /* GradeViewCell.swift */,
@@ -406,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA21F9E019FF54C100066001 /* GroupStudentViewCell.swift in Sources */,
 				5D0BF85619EAF989000018FF /* LoginViewController.swift in Sources */,
 				5D30E96B19EAF0F700640C1C /* StudentGroupViewController.swift in Sources */,
 				5DB129A219FC9345002A9B0F /* NotesViewController.swift in Sources */,

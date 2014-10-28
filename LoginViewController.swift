@@ -24,10 +24,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func showHome(sender: AnyObject) {
-        if (self.usernameLabel.text == "mia.hamm" && self.passwordLabel.text == "12345") {
+        //if (self.usernameLabel.text == "mia.hamm" && self.passwordLabel.text == "12345") {
         
             self.performSegueWithIdentifier("showHome", sender: self)
-        }
+       // }
     }
     @IBOutlet weak var passwordLabel: UITextField!
 

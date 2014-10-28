@@ -31,7 +31,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Probability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2N-jK-FL5">
-                                                    <rect key="frame" x="259" y="22" width="82" height="34"/>
+                                                    <rect key="frame" x="237" y="22" width="94" height="34"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -86,6 +86,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bRq-IW-EIX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pBN-cK-kcI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="127" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="C58-j4-9Es">
@@ -168,16 +169,16 @@
                                                     <exclude reference="AEH-Ch-ltv"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <exclude reference="Fxb-Qr-VGg"/>
+                                                    <exclude reference="Ip2-75-2Ez"/>
+                                                    <exclude reference="bxO-N9-2ED"/>
+                                                    <exclude reference="vhI-9O-pUn"/>
                                                     <exclude reference="2WW-sf-r9Z"/>
                                                     <exclude reference="6dB-4H-nWZ"/>
                                                     <exclude reference="ExF-J1-aVV"/>
                                                     <exclude reference="6D6-H2-Z77"/>
                                                     <exclude reference="Md3-mj-Xvq"/>
                                                     <exclude reference="fxg-pR-Q6Y"/>
-                                                    <exclude reference="Fxb-Qr-VGg"/>
-                                                    <exclude reference="Ip2-75-2Ez"/>
-                                                    <exclude reference="bxO-N9-2ED"/>
-                                                    <exclude reference="vhI-9O-pUn"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -187,16 +188,16 @@
                                                     <include reference="AEH-Ch-ltv"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <include reference="Fxb-Qr-VGg"/>
+                                                    <include reference="Ip2-75-2Ez"/>
+                                                    <include reference="bxO-N9-2ED"/>
+                                                    <include reference="vhI-9O-pUn"/>
                                                     <exclude reference="2WW-sf-r9Z"/>
                                                     <include reference="6dB-4H-nWZ"/>
                                                     <include reference="ExF-J1-aVV"/>
                                                     <include reference="6D6-H2-Z77"/>
                                                     <include reference="Md3-mj-Xvq"/>
                                                     <include reference="fxg-pR-Q6Y"/>
-                                                    <include reference="Fxb-Qr-VGg"/>
-                                                    <include reference="Ip2-75-2Ez"/>
-                                                    <include reference="bxO-N9-2ED"/>
-                                                    <include reference="vhI-9O-pUn"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -204,6 +205,7 @@
                                         <connections>
                                             <outlet property="nameLabel" destination="sp2-1H-agd" id="4eI-6Q-ONh"/>
                                             <outlet property="profileView" destination="fIg-zA-zmI" id="LFL-hg-uVf"/>
+                                            <segue destination="dFS-sX-Ina" kind="showDetail" identifier="showProfile" id="MJZ-RA-KFn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -225,7 +227,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="92z-OZ-nAT">
-                        <barButtonItem key="leftBarButtonItem" title="Group" id="bT8-Fb-Z53">
+                        <barButtonItem key="leftBarButtonItem" title="Topics" id="bT8-Fb-Z53">
                             <connections>
                                 <action selector="goBack:" destination="OR5-yS-PMP" id="nFm-TT-WJQ"/>
                             </connections>
@@ -1287,6 +1289,6 @@
         <image name="waste-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zfK-Vr-TXC"/>
+        <segue reference="MJZ-RA-KFn"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,10 +12,12 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
     
     @IBOutlet weak var tableView: UITableView!
     var studentList:[Student] = []
+    var groupName:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = groupName
         tableView.dataSource = self
         tableView.delegate = self
 
@@ -70,16 +72,17 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-      /*  if (segue.identifier == "showAcademicRecord") {
+        if (segue.identifier == "showProfile") {
             
             var indexPath:NSIndexPath = self.tableView.indexPathForSelectedRow()!
             let student = studentList[indexPath.row]
             
             let navigationController = segue.destinationViewController as UINavigationController
-            let detailViewController = navigationController.viewControllers[0] as StudentAcademicPageViewController
+            let detailViewController = navigationController.viewControllers[0] as StudentProfilePageViewController
             detailViewController.student = student
+
             
-        }*/
+        }
         
     }
 

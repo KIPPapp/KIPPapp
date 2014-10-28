@@ -159,6 +159,8 @@ class GroupController: UIViewController, UITableViewDataSource, UITableViewDeleg
             let navigationController = segue.destinationViewController as UINavigationController
             let detailViewController = navigationController.viewControllers[0] as StudentGroupViewController
             detailViewController.studentList = studentList
+            var groupNames = self.studentGroups[indexPath.section] as Array!
+            detailViewController.groupName = groupNames[indexPath.row]
             
         } 
         

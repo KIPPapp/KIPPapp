@@ -19,17 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-CWPopup.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-EDHexColor.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-M13Checkbox.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,47 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>343A8B16FAF1D30451BEF4E8</key>
+		<key>060F7F366DB88B4AFB7E6416</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4557E891D676BAF9ECDCECBC</key>
+		<key>10EE121F6318C7AF86B7021D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7BFEDDC8428B8B2B8E7D6ABB</key>
+		<key>5103B633C37FF6F66F984D3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9EB48303B484FE305EA2A186</key>
+		<key>6C278B32E3D23F44D3B818C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC41688AEDF4A3AE0073CAF3</key>
+		<key>934CE87EC1F184CCFB4A44D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DCE19E92173258FBE2E19901</key>
+		<key>9C5138130AA8441E3EFF31F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2653E418C9E2E780B3564C4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E3AA4282C9D726B54E745323</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F9099C992836795EF6C5BE82</key>
+		<key>B923E9A36D668F7E735A6AEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

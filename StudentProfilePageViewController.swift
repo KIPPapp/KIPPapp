@@ -50,7 +50,10 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
         masteredLabel.text =  NSString(format: "%.1f %%", student!.mastery)
         progressLabel.text = NSString(format: "%.1f %%", student!.progress)
         
-        stats = ["Attendance","Progress","Mastery","Number of Tries","Min Last Week"]
+        stats = ["Attendance","Last Time Celebrated","Number of Tries","Min Last Week"]
+        if (student!.celebrated) {
+            starImage.image = UIImage(named:"green-star.png")
+        }
         
     }
 
@@ -106,16 +109,13 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
            
             cell.statValueLabel.text = "4, 0, 0"
         }
-        else if (labelName == "Progress") {
             
-             cell.statValueLabel.text = NSString(format: "%.1f %%", student!.progress)
-        }
-        else if (labelName == "Mastery") {
-             cell.statValueLabel.text = NSString(format: "%.2f %%", student!.mastery)
-        }
-        
         else if (labelName == "Number of Tries") {
             cell.statValueLabel.text =  NSString(format: "%d", student!.currentNumTries)
+        }
+            
+        else if (labelName == "Last Time Celebrated") {
+            cell.statValueLabel.text = "10/03/2014"
         }
         else if (labelName == "Min Last Week") {
              cell.statValueLabel.text =  NSString(format: "%d", student!.minLastWeek)

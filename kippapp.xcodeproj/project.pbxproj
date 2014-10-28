@@ -14,6 +14,7 @@
 		5D2FBD5019E221EA00621E49 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D2FBD4F19E221EA00621E49 /* Images.xcassets */; };
 		5D2FBD5319E221EA00621E49 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D2FBD5119E221EA00621E49 /* LaunchScreen.xib */; };
 		5D2FBD5F19E221EA00621E49 /* kippappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2FBD5E19E221EA00621E49 /* kippappTests.swift */; };
+		5D3073B719FF58FD00F1A437 /* CBStoreHouseTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3073B619FF58FD00F1A437 /* CBStoreHouseTransition.m */; };
 		5D30E96119EA633F00640C1C /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D30E96019EA633F00640C1C /* GroupCell.swift */; };
 		5D30E96719EAEC1A00640C1C /* StudentProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D30E96619EAEC1A00640C1C /* StudentProfilePageViewController.swift */; };
 		5D30E96B19EAF0F700640C1C /* StudentGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D30E96A19EAF0F700640C1C /* StudentGroupViewController.swift */; };
@@ -67,6 +68,8 @@
 		5D2FBD5819E221EA00621E49 /* kippappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kippappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D2FBD5D19E221EA00621E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D2FBD5E19E221EA00621E49 /* kippappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kippappTests.swift; sourceTree = "<group>"; };
+		5D3073B619FF58FD00F1A437 /* CBStoreHouseTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBStoreHouseTransition.m; sourceTree = "<group>"; };
+		5D3073B819FF593B00F1A437 /* CBStoreHouseTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBStoreHouseTransition.h; sourceTree = "<group>"; };
 		5D30E96019EA633F00640C1C /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		5D30E96619EAEC1A00640C1C /* StudentProfilePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentProfilePageViewController.swift; sourceTree = "<group>"; };
 		5D30E96A19EAF0F700640C1C /* StudentGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentGroupViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 		5D2FBD3A19E221EA00621E49 = {
 			isa = PBXGroup;
 			children = (
+				5D3073B819FF593B00F1A437 /* CBStoreHouseTransition.h */,
+				5D3073B619FF58FD00F1A437 /* CBStoreHouseTransition.m */,
 				7ECE38C619FDE099000BEBFE /* NMPopUpViewController */,
 				5DB6C29519EB5C4D00F1DAF3 /* api */,
 				BAC8398419EB57BE0067E9AB /* Models */,
@@ -421,6 +426,7 @@
 				5DB6C29719EB5C7800F1DAF3 /* ParseApi.swift in Sources */,
 				5DB129A419FCA3DB002A9B0F /* NotesViewCell.swift in Sources */,
 				5DB6C2CE19F33D0500F1DAF3 /* StudentViewCell.swift in Sources */,
+				5D3073B719FF58FD00F1A437 /* CBStoreHouseTransition.m in Sources */,
 				5D703CBD19EA3A3C0031FDDB /* CheckinController.swift in Sources */,
 				5D7A9CD619F34EDB00E14D00 /* StudentViewController.swift in Sources */,
 				BAC8398B19EB57FF0067E9AB /* Parent.swift in Sources */,

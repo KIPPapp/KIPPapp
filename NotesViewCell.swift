@@ -10,6 +10,7 @@ import UIKit
 
 class NotesViewCell: UITableViewCell {
 
+    @IBOutlet weak var notesDate: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +22,5 @@ class NotesViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBOutlet weak var notesText: UILabel!
 }

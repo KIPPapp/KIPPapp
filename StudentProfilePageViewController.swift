@@ -12,10 +12,13 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
     
     @IBOutlet weak var starImage: UIImageView!
   
+   
     @IBAction func goToNotes(sender: AnyObject) {
         
         performSegueWithIdentifier("goToNotes", sender: self)
     }
+
+
     @IBOutlet weak var studentNameLabel: UILabel!
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -28,7 +31,6 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
     @IBOutlet weak var masteredLabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
     
-    @IBOutlet weak var notesView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
      
@@ -50,7 +52,7 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
         masteredLabel.text =  NSString(format: "%.1f %%", student!.mastery)
         progressLabel.text = NSString(format: "%.1f %%", student!.progress)
         
-        stats = ["Attendance","Last Time Celebrated","Number of Tries","Min Last Week"]
+        stats = ["Attendance","Last time celebrated","Number of tries","Min last week","Weeks on topic"]
         if (student!.celebrated) {
             starImage.image = UIImage(named:"green-star.png")
         }
@@ -86,8 +88,7 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.reloadData();
-        notesView.layer.cornerRadius = 5.0
-        notesView.layer.masksToBounds = true
+      
 
         
     }
@@ -106,22 +107,25 @@ class StudentProfilePageViewController: UIViewController, UICollectionViewDataSo
         let labelName = stats[indexPath.row]
          cell.statTitleLabel.text = labelName
         if (labelName == "Attendance") {
-           
-            cell.statValueLabel.text = "4, 0, 0"
+            var present = Int(arc4random_uniform(5))
+            var absent = 5 - present
+            cell.statValueLabel.text = NSString(format: "%d, %d, %d", present,absent,0)
         }
             
-        else if (labelName == "Number of Tries") {
+        else if (labelName == "Number of tries") {
             cell.statValueLabel.text =  NSString(format: "%d", student!.currentNumTries)
         }
             
-        else if (labelName == "Last Time Celebrated") {
+        else if (labelName == "Last time celebrated") {
             cell.statValueLabel.text = "10/03/2014"
         }
-        else if (labelName == "Min Last Week") {
+        else if (labelName == "Min last week") {
              cell.statValueLabel.text =  NSString(format: "%d", student!.minLastWeek)
         }
         
-        
+        else if (labelName == "Weeks on topic") {
+            cell.statValueLabel.text =   NSString(format: "%d", Int(arc4random_uniform(4)))
+        }
         
         return cell
     }

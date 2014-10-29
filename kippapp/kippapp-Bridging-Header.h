@@ -7,3 +7,9 @@
 #import "UIColor+EDHexColor.h"
 #import "UIImageView+AFNetworking.h"
 #import "UIView+RNActivityView.h"
+#import "CBZSplashView.h"
+#import "UIColor+HexString.h"
+#import "UIBezierPath+Shapes.h"
+#import "CBZRasterSplashView.h"
+#import "CBZVectorSplashView.h"
+

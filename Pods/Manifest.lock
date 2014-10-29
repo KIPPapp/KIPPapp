@@ -29,14 +29,16 @@ PODS:
   - Parse (1.4.1):
     - Bolts (~> 1.1.2)
   - RNActivityView (0.0.4)
+  - UIColor-HexString (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - BDBOAuth1Manager
-  - CBZSplashView
+  - CBZSplashView (~> 1.0.0)
   - EDHexColor
   - Parse
   - RNActivityView
+  - UIColor-HexString
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
@@ -46,5 +48,6 @@ SPEC CHECKSUMS:
   EDHexColor: 1593003ed93fdd7680949fa6206212ce05ad58a5
   Parse: db1a09c832b7509edcc88a65dc07229f5e578c73
   RNActivityView: 473483482ef24f08a5eb6b98c8f04fd3a6a4f971
+  UIColor-HexString: a9eabf02c1a2f9036ed6ac9cb2a3ea086f3b39e4
 
 COCOAPODS: 0.34.4

@@ -11,13 +11,29 @@ import UIKit
 class LoginViewController: UIViewController {
 
 
-   
+    var splashView:CBZSplashView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 14.0
         loginButton.layer.masksToBounds = true
 
+        var imageIcon:UIImage = UIImage(named: "kipp-kids")
+        var bezier:UIBezierPath = UIBezierPath.twitterShape()
+        var color:UIColor = UIColor(hexString: "4099FF")
+       // var splashView:CBZSplashView = CBZSplashView(bezierPath: bezier, backgroundColor: color)
+        var splashView:CBZSplashView = CBZSplashView(icon: imageIcon, backgroundColor: color)
+        splashView.animationDuration = 1.4
+        self.view.addSubview(splashView)
+        self.splashView = splashView
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let delay = 2 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {self.splashView.startAnimation()})
     }
 
     @IBOutlet weak var loginButton: UIButton!

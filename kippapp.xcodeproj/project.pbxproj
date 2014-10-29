@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00F41A521A00EEF600642CCB /* kipp-kids.gif in Resources */ = {isa = PBXBuildFile; fileRef = 00F41A511A00EEF500642CCB /* kipp-kids.gif */; };
 		5D0BF85619EAF989000018FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0BF85519EAF989000018FF /* LoginViewController.swift */; };
 		5D2FBD4919E221EA00621E49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2FBD4819E221EA00621E49 /* AppDelegate.swift */; };
 		5D2FBD4E19E221EA00621E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2FBD4C19E221EA00621E49 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00F41A511A00EEF500642CCB /* kipp-kids.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "kipp-kids.gif"; sourceTree = "<group>"; };
 		28C583936A0E35000F124A8E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2F0DC0C77BED9C0777DAC71F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DA1BA3838E8762755C3DFE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		5D2FBD4519E221EA00621E49 /* kippapp */ = {
 			isa = PBXGroup;
 			children = (
+				00F41A511A00EEF500642CCB /* kipp-kids.gif */,
 				5D2FBD4819E221EA00621E49 /* AppDelegate.swift */,
 				5D2FBD4C19E221EA00621E49 /* Main.storyboard */,
 				5D2FBD4F19E221EA00621E49 /* Images.xcassets */,
@@ -356,6 +359,7 @@
 				5DEA7C271A0081FB006D2C37 /* clap.mp3 in Resources */,
 				5D2FBD5319E221EA00621E49 /* LaunchScreen.xib in Resources */,
 				5D2FBD5019E221EA00621E49 /* Images.xcassets in Resources */,
+				00F41A521A00EEF600642CCB /* kipp-kids.gif in Resources */,
 				7ECE38BA19FDCD23000BEBFE /* PopUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

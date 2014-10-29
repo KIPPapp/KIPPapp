@@ -6,5 +6,5 @@ pod 'BDBOAuth1Manager'
 pod 'RNActivityView'
 pod 'Parse'
 pod 'EDHexColor'
-
+pod 'CBZSplashView'
 

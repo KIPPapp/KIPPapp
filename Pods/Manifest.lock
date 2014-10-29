@@ -24,6 +24,7 @@ PODS:
     - AFNetworking/NSURLConnection (~> 2.4.0)
     - AFNetworking/NSURLSession (~> 2.4.0)
   - Bolts (1.1.3)
+  - CBZSplashView (1.0.0)
   - EDHexColor (0.0.1)
   - Parse (1.4.1):
     - Bolts (~> 1.1.2)
@@ -32,6 +33,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - BDBOAuth1Manager
+  - CBZSplashView
   - EDHexColor
   - Parse
   - RNActivityView
@@ -40,8 +42,9 @@ SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   BDBOAuth1Manager: 0625ba20bd7d36461bbf6dc3d29276b5932b7409
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  CBZSplashView: 2d5346c06ae78e3f5ed8ea298ef7daccbceddb16
   EDHexColor: 1593003ed93fdd7680949fa6206212ce05ad58a5
   Parse: db1a09c832b7509edcc88a65dc07229f5e578c73
   RNActivityView: 473483482ef24f08a5eb6b98c8f04fd3a6a4f971
 
-COCOAPODS: 0.34.1
+COCOAPODS: 0.34.4

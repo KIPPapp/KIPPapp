@@ -16,8 +16,10 @@ class StudentGroupViewController: UIViewController, UITableViewDelegate,  UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.orangeColor()]
+        self.navigationController!.navigationBar.titleTextAttributes = titleDict
         self.navigationItem.title = groupName
+        self.navigationController?.navigationBar
         tableView.dataSource = self
         tableView.delegate = self
 

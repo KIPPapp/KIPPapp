@@ -8,36 +8,55 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>Pods-BDBOAuth1Manager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Pods-Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-CBZSplashView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>Pods-EDHexColor.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Pods-Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>Pods-RNActivityView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -52,6 +71,21 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>117E11ED6A906D5A17714A7A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1537B6A1AC7F3AA77111820C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44286E4781083641712D24D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5103B633C37FF6F66F984D3A</key>
 		<dict>
 			<key>primary</key>
@@ -62,7 +96,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>715F8481E4FBC7B28A43125B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7606D08C7C2F6871F1B569CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>934CE87EC1F184CCFB4A44D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9AD0E6158DBECBC0C0DD7F38</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +121,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B10B61B9BD700E672E8BC722</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B923E9A36D668F7E735A6AEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E79A411A6BC2FC6D3866E6FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

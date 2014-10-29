@@ -42,7 +42,15 @@ class StudentViewCell: UICollectionViewCell {
 
             studentState.setImage(UIImage(named:"green-star.png"),forState: UIControlState.Normal)
             
-                student!.celebrated = true
+            student!.celebrated = true
+            var mysoundname = "clap"
+            let soundURL = NSBundle.mainBundle().URLForResource(mysoundname, withExtension: "mp3")
+            var mySound: SystemSoundID = 0
+            AudioServicesCreateSystemSoundID(soundURL, &mySound)
+            
+            // Play
+            AudioServicesPlaySystemSound(mySound);
+           
         }
     }
     

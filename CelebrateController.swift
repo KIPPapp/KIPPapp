@@ -40,7 +40,7 @@ class CelebrateController: UIViewController, UICollectionViewDataSource, UIColle
         collectionView.backgroundColor = UIColor(red: 239/255, green: 248/255, blue: 255/255, alpha: 1.0)
         collectionView.dataSource = self
         collectionView.delegate = self
-        self.view.showActivityViewWithLabel("Loading")
+     
         var parseAPI:ParseAPI = (self.tabBarController as KippAppController).parseAPI
         parseAPI.getStudentData("Mia Hamm", grade:"Secondary Intervention") { (students, groups,error) -> () in
             for student in students! {
@@ -48,8 +48,7 @@ class CelebrateController: UIViewController, UICollectionViewDataSource, UIColle
             }
             
             self.studentList.sort({ $0.progress > $1.progress })
-            self.view.hideActivityView()
-            self.collectionView.reloadData()
+                     self.collectionView.reloadData()
             
         }
 

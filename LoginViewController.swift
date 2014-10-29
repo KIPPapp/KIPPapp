@@ -14,10 +14,13 @@ class LoginViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.layer.cornerRadius = 14.0
+        loginButton.layer.masksToBounds = true
 
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var loginButton: UIButton!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -29,9 +32,7 @@ class LoginViewController: UIViewController {
             self.performSegueWithIdentifier("showHome", sender: self)
        // }
     }
-    @IBOutlet weak var passwordLabel: UITextField!
-
-    @IBOutlet weak var usernameLabel: UITextField!
+ 
     /*
     // MARK: - Navigation
 

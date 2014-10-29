@@ -29,6 +29,7 @@
 		5DB6C29719EB5C7800F1DAF3 /* ParseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6C29619EB5C7800F1DAF3 /* ParseApi.swift */; };
 		5DB6C29A19EB842000F1DAF3 /* KippAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6C29919EB842000F1DAF3 /* KippAppController.swift */; };
 		5DB6C2CE19F33D0500F1DAF3 /* StudentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6C2CD19F33D0500F1DAF3 /* StudentViewCell.swift */; };
+		5DEA7C271A0081FB006D2C37 /* clap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5DEA7C261A0081FB006D2C37 /* clap.mp3 */; };
 		78BB434D4193D4750AA3749A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0DC0C77BED9C0777DAC71F /* libPods.a */; };
 		7ECE38BA19FDCD23000BEBFE /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECE38B919FDCD23000BEBFE /* PopUpViewController.xib */; };
 		7ECE38BC19FDCD7B000BEBFE /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE38BB19FDCD7B000BEBFE /* PopUpViewController.swift */; };
@@ -84,6 +85,7 @@
 		5DB6C29619EB5C7800F1DAF3 /* ParseApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseApi.swift; sourceTree = "<group>"; };
 		5DB6C29919EB842000F1DAF3 /* KippAppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KippAppController.swift; sourceTree = "<group>"; };
 		5DB6C2CD19F33D0500F1DAF3 /* StudentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewCell.swift; sourceTree = "<group>"; };
+		5DEA7C261A0081FB006D2C37 /* clap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = clap.mp3; path = ../clap.mp3; sourceTree = "<group>"; };
 		7ECE38B919FDCD23000BEBFE /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		7ECE38BB19FDCD7B000BEBFE /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		7ECE38C319FDDDC6000BEBFE /* ShowPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPopupViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		5D2FBD4619E221EA00621E49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5DEA7C261A0081FB006D2C37 /* clap.mp3 */,
 				5D2FBD4719E221EA00621E49 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -350,6 +353,7 @@
 			files = (
 				7ECE38CC19FDE1C6000BEBFE /* PopUpViewController_iPad.xib in Resources */,
 				5D2FBD4E19E221EA00621E49 /* Main.storyboard in Resources */,
+				5DEA7C271A0081FB006D2C37 /* clap.mp3 in Resources */,
 				5D2FBD5319E221EA00621E49 /* LaunchScreen.xib in Resources */,
 				5D2FBD5019E221EA00621E49 /* Images.xcassets in Resources */,
 				7ECE38BA19FDCD23000BEBFE /* PopUpViewController.xib in Resources */,
@@ -554,7 +558,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = kippapp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "kippapp/kippapp-Bridging-Header.h";
@@ -569,7 +573,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = kippapp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "kippapp/kippapp-Bridging-Header.h";

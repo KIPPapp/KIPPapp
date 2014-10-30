@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 14.0
         loginButton.layer.masksToBounds = true
 
-        var imageIcon:UIImage = UIImage(named: "kipp-kids")
+        var imageIcon:UIImage = UIImage(named: "kippicon")
         var bezier:UIBezierPath = UIBezierPath.twitterShape()
         var color:UIColor = UIColor(hexString: "4099FF")
        // var splashView:CBZSplashView = CBZSplashView(bezierPath: bezier, backgroundColor: color)

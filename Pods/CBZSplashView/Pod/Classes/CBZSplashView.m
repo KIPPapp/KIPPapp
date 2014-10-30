@@ -52,7 +52,7 @@
 - (CGSize)iconStartSize
 {
   if (!_iconStartSize.height) {
-    _iconStartSize = CGSizeMake(60, 60);
+    _iconStartSize = CGSizeMake(100, 100);
   }
   return _iconStartSize;
 }
